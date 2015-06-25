@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Webtal Telecom</title>
+	<title>Kabanas</title>
 	<meta name="viewport"
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="theme-color" content="#000000"/>
 	<script src="dist/js/villa.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>-->
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="dist/css/villa.min.css"/>
 	<link rel="stylesheet" href="dist/css/mowe.min.css"/>
-	<link rel="stylesheet" href="dist/css/wtal.min.css"/>
+	<link rel="stylesheet" href="dist/css/font-awesome.css"/>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/villac.css"/>
 	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
@@ -17,364 +19,430 @@
 	<script src="dist/js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
-<body class="navbar-fixed">
+<body>
 
-<div class="navbar fixed-sm font-white user-unselect">
-	<div class="full wide container">
+<style>
+	body {
+		background-color: #fafafa;
+	}
+</style>
 
-		<header class="bg-sm white">
+<style scoped>
 
-			<div class="item">
-				<a class="brand" href="#">
-					<span class="brand-text">WEBTal<!--<span class="slogan">telecom</span>--></span>
-				</a>
-				<a class="logo font-grey-700" href="#">
-					<svg id="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-						<g>
-							<path d="M332,203.5c151.6,163.9,151.6,429.1,0,592.9"></path>
-							<path d="M403.5,111.8c199.7,214.6,199.7,561.9,0,776.5"></path>
-							<path d="M468,20c266.7,265.3,266.7,694.7,0,960"></path>
-						</g>
-					</svg>
-				</a>
-			</div>
+	body > header {
+		border-bottom: solid 1px #eeeeee;
+	}
 
-			<button class="toggle teal-a400 font-white">
-				<svg version="1.1" id="bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-					<g>
-						<line class="st0" x1="99.1" y1="182.2" x2="1000" y2="182.2"/>
-						<line class="st0" x1="99.1" y1="504.6" x2="1000" y2="504.6"/>
-						<line class="st0" x1="99.1" y1="817.8" x2="1000" y2="817.8"/>
-					</g>
-				</svg>
-			</button>
+	body > header h1 {
+		font-family: 'Indie Flower';
+		font-size: 1.75em;
+		line-height: 3;
+		font-weight: 400;
+	}
 
-		</header>
+	body > header .border {
+		display: flex;
+	}
 
-		<footer>
+	body > header .container {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-			<div class="menu bg-sm white font-white">
-				<div class="item">
-					<a class="link hfont-green-a400" href="#prices">Planos</a>
+	body > header .contact {
+		font-size: 1.3125em;
+	}
+
+	body > header .border span {
+		height: 1px;
+		width: 100%;
+	}
+
+</style>
+
+<header class="white">
+	<div class="container wide flex">
+		<div class="logo">
+			<h1 class="font-deep-orange">Kabanas<em>Info</em></h1>
+		</div>
+		<div class="contact font-light-blue-200">
+			<a href="#contact">
+				<span>+55 18 3351 4181</span>
+			</a>
+		</div>
+	</div>
+	<!--<div class="border">
+		<span class="indigo"></span>
+		<span class="blue"></span>
+		<span class="teal"></span>
+		<span class="green"></span>
+		<span class="orange"></span>
+		<span class="red"></span>
+	</div>-->
+</header>
+
+<style scoped>
+
+	main {
+		margin-top: 6em;
+	}
+
+</style>
+
+<main class="">
+
+	<style scoped>
+		.wwd {
+			margin-bottom: 6em;
+		}
+
+		.wwd ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		.wwd li {
+			width: 16em;
+			padding: 1em .75em 1.125em;
+		}
+
+		.wwd li header {
+			color: #ffffff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 12em;
+		}
+
+		.wwd li header .fa {
+			font-size: 6em;
+		}
+
+		.wwd h2 {
+			font-weight: 300;
+			line-height: 1.5;
+		}
+
+		.wwd.only-head {
+			max-width: 48em;
+		}
+
+		.wwd.only-head li {
+			padding: 0;
+		}
+
+		.wwd.only-head li .content {
+			display: none;
+		}
+
+	</style>
+
+	<div class="wwd container">
+		<ul>
+			<li>
+				<header class="blue" style="border-top-left-radius: 25%;">
+					<span class="fa fa-windows"></span>
+				</header>
+				<div class="content font-brown-600">
+					<h2>Instalação</h2>
+					<p>Instalamos Windows, Mac e Linux.</p>
 				</div>
-				<div class="item">
-					<a class="link hfont-green-a400" href="#about">Sobre</a>
+			</li>
+			<li>
+				<header class="orange">
+					<span class="fa fa-ambulance"></span>
+				</header>
+				<div class="content font-brown-600">
+					<h2>Suporte</h2>
+					<p>Fazemos manutenção de computadores.</p>
 				</div>
-				<div class="item teal-a400">
-					<a class="link font-white" href="#contato">Contato</a>
+			</li>
+			<li>
+				<header class="green">
+					<span class="fa fa-laptop"></span>
+				</header>
+				<div class="content font-brown-600">
+					<h2>Hardware</h2>
+					<p>Impressoras.</p>
+				</div>
+			</li>
+			<li>
+				<header class="red">
+					<span class="fa fa-connectdevelop"></span>
+				</header>
+				<div class="content font-brown-600">
+					<h2>Rede</h2>
+					<p>Fazemos instalação de redes.</p>
+				</div>
+			</li>
+			<li>
+				<header class="teal">
+					<span class="fa fa-cloud"></span>
+				</header>
+				<div class="content font-brown-600">
+					<h2>Nuvem</h2>
+					<p>Nossa equipe tem experiência em trazer o armazenamento em nuvem para a sua empresa ou residencia.</p>
+				</div>
+			</li>
+			<li>
+				<header class="indigo" style="border-bottom-right-radius: 25%;">
+					<span class="fa fa-globe"></span>
+				</header>
+				<div class="content font-brown-600">
+					<h2>Web</h2>
+					<p>Temos um catalogo enorme de serviços para a levar a sua empresa para a Web.</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<style scoped>
+
+		.block {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			-webkit-background-size: cover;
+			min-height: 48em;
+		}
+
+		.block .container {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.block .about,
+		.block .content {
+			width: 100%;
+		}
+
+		.block .about p {
+			max-width: 36em;
+		}
+
+		.block .content {
+			flex-grow: 2;
+		}
+
+		.block h1 {
+			font-weight: 100;
+			line-height: 1.5;
+		}
+
+		.block p {
+			font-size: 1.5em;
+			line-height: 1.5;
+			font-weight: 300;
+		}
+
+	</style>
+
+	<div id="install" class="block grey-900 font-white">
+		<div class="container full">
+			<div class="about">
+				<header>
+					<h1>Instalação</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, architecto autem, cum dolorum error esse explicabo, laborum laudantium minus odio possimus quae sed veritatis. Deserunt dignissimos ducimus nobis reprehenderit tempora!</p>
+				</header>
+				<footer></footer>
+			</div>
+			<div class="content"></div>
+		</div>
+	</div>
+
+	<div id="support" class="block font-white">
+		<div class="container full">
+			<h1>Suporte</h1>
+		</div>
+		<style scoped>
+			#support {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("img/moto.jpg");
+			}
+
+			.block {
+
+			}
+
+			.block .switch {
+				padding: 1.5em 0;
+			}
+
+			.block .switch button {
+				border: solid 1px;
+				border-color: #1a237e #283593 #303f9f;
+				color: #ffffff;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				font-size: 1.125em;
+				line-height: 1.4;
+				padding: .2em 1.125em;
+				background: #0d47a1;
+				cursor: pointer;
+				/*border-color: #435A8B #3C5488 #334C83;*/
+				/*background: #4E69A2;*/
+			}
+
+			.block .switch button:focus,
+			.block .switch button:hover {
+				background: #1976d2;
+			}
+
+			.block .switch button:active {
+				background: #1565c0;
+			}
+
+			.block .swip {
+				width: 200%;
+				height: 24em;
+				display: flex;
+				flex-direction: row;
+				margin-left: 0;
+				-webkit-transition: margin 1s;
+				-moz-transition: margin 1s;
+				-ms-transition: margin 1s;
+				-o-transition: margin 1s;
+				transition: margin 1s;
+			}
+
+			.block .slide {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.block.slide-2 .swip {
+				margin-left: -100%;
+			}
+
+			.album {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				opacity: .9;
+			}
+
+			.album img {
+				height: 100%;
+			}
+		</style>
+		<div class="swip">
+			<div class="slide">
+				<div class="container full">
+					<div class="about">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aperiam commodi cum dolore ducimus eaque eum explicabo facilis id illum, maxime nostrum perspiciatis placeat recusandae, repudiandae sapiente voluptas voluptatibus!</p>
+					</div>
+					<div></div>
+				</div>
+				<div class="switch">
+					<button>Ver galeria</button>
 				</div>
 			</div>
-
-		</footer>
-
-
-	</div>
-</div>
-
-<!--
-	TODO - carousel
-	Need to carousel or another solution to show great deals
--->
-
-<div class="hero green-300 bg-cover font-white height-window" id="foo" height-offset="0">
-
-	<div class="wide container flex flex-wrap">
-
-		<div class="welcome flex-3">
-			<h1>Bem vindo à<br/><strong>Webtal Telecom</strong>!</h1>
-		</div>
-
-		<div class="promo flex-2 font-grey-50">
-			<div id="promo01">
-				<p>
-					<span class="small">Tenha a <strong>melhor Internet</strong> da região</span>
-				</p>
-				<p>
-					<span class="x-small">
-						<em>a partir de</em>
-					</span>
-					<strong>
-						<span class="price">29</span>
-						<span class="cents">,90</span>
-					</strong>
-				</p>
-			</div>
-			<a href="#" id="prices-scroll" class="btn">Conheça nossos planos</a>
-		</div>
-
-	</div>
-
-</div>
-
-<div id="about" class="services block grey-50 font-grey-800">
-
-	<div class="container">
-		<div class="about">
-			<h1>Bem vindo à Webtal Telecom!</h1>
-
-			<p class="lead">Nós temos o <b>compromisso</b> de <strong>oferecer</strong> sempre os melhores serviços aos seus clientes. Para isso investimos constantemente em novas tecnologias e soluções inovadoras, garantindo a evolução constante das taxas de Download e Upload.  E Garantindo a qualidade oferecida aos nossos clientes.</p>
-		</div>
-	</div>
-
-	<div class="blog container">
-
-		<h1>Nossa história</h1>
-		<p>WEBTal Telecom, que passou a oferecer serviço de acesso local e contribuiu decisivamente para a democratização da tecnologia da informação e à inclusão digital. O pioneirismo e o empreendedorismo do provedor são uma das mais importantes contribuições empresariais à sociedade e ao desenvolvimento do município nas últimas décadas, principalmente pelas profundas mudanças que o acesso facilitado à rede mundial de computadores causou na sociedade e na economia.</p>
-		<p>Com muitos investimentos em novas tecnologias, a ampliação da rede de distribuição de sinal e a confiança dos inúmeros  clientes, a WEBTal é sinônimo de inovação em Palmital desde o início de sua operação comercial, em junho de 2001. Com trabalho consolidado e histórico de bons serviços prestados, o provedor é uma empresa que gera empregos e oferece a melhor tecnologia a usuários, com sua rede De Fibra Ótica e wireless (sem fio),  expandidas nos municípios de Palmital , Ibirarema, Nossa Senhora Aparecida, Nova Alexandria e Platina  além de atender um grande número de moradores e empresas rurais em parte dos municípios de Andirá (PR), Cândido Mota e Ribeirão do Sul.</p>
-		<span class="full-wide bg-cover photo"></span>
-		<p>Nos últimos anos a WEBTal buscou a inovação e as tecnologias de ponta para garantir o pleno atendimento às necessidades dos clientes residenciais, comerciais, industriais e rurais. Nos primeiros períodos de funcionamento o acesso à internet era feito por meio do uso de linha telefônica, que era onerado pelo custo dos pulsos cobrados pela operadora de telefonia. Com a implantação do serviço via rádio (wireless), amplamente utilizado em todo o mundo, os usuários se utilizam da comunicação sem fio com o provedor e também contam com maior qualidade no sinal para garantir velocidade na transferência de dados pelo acesso em banda larga.</p>
-
-		<h1>Missão</h1>
-		<p>Nós temos como objetivo principal prover com excelência, desenvolver, comercializar e implantar tecnologia em telecomunicação. Serviços e soluções inteligentes em conectividade atendendo os nossos clientes de forma integrada e precisa; oferecendo serviços de telecomunicações com qualidade e alta disponibilidade para negócios e lazer de nossos clientes.</p>
-		<p>Prestando o melhor serviço, com o melhor atendimento e com a melhor tecnologia para integrar e aproximar pessoas.</p>
-
-	</div>
-
-</div>
-
-
-
-<div id="prices" class="block teal-900 font-white">
-
-	<div class="container">
-		<div class="about">
-			<h1>Escolha o seu plano</h1>
-			<p class="lead">Para atender melhor os nossos clientes, criamos planos para cada tipo de necessidade. Escolha o seu plano na lista a baixo e preencha o seu nome e telefone, entraremos em contato com você o mais breve possível! Em caso de duvidas, entre em contato!</p>
-		</div>
-		<div>
-			<span>Exibindo planos disponíveis para</span>
-			<select name="city" id="city">
-				<option value="palmital" selected>Palmital</option>
-				<option value="ibirarema">Ibirarema</option>
-				<option value="platina">Platina</option>
-			</select>
-		</div>
-	</div>
-
-	<div class="wipe" id="prices-wipe">
-
-		<div class="frame pricelist-palmital">
-
-			<div class="container wide">
-
-				<div class="slide">
-
-					<ul class="nav pills">
-						<li>Residencial</li>
-						<li>Rural</li>
-					</ul>
-
-					<ul class="content">
-
-						<li class="pricelist hidden-price" data-product-reference="residencial">
-							<ul class="content">
-								<li>
-									<span class="title">1 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">2 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">3 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">4 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-							</ul>
-						</li>
-
-						<li class="pricelist hidden-price" data-product-reference="rural">
-							<ul class="content">
-								<li>
-									<span class="title">1 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">2 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">3 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">4 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-							</ul>
-						</li>
-
-					</ul>
-
+			<div class="slide">
+				<div class="container full">
+					<style scoped>
+						.container {
+							height: 100%;
+						}
+					</style>
+					<div class="album grey-900">
+						<img src="img/hardware.jpeg" alt=""/>
+					</div>
 				</div>
-
-			</div>
-
-		</div>
-
-		<div class="frame pricelist-ibirarema">
-
-			<div class="container wide">
-
-				<div class="slide">
-
-					<ul class="nav pills">
-						<li>Residencial</li>
-						<li>Rural</li>
-					</ul>
-
-					<ul class="content">
-
-						<li class="pricelist hidden-price" data-product-reference="residencial">
-							<ul class="content">
-								<li>
-									<span class="title">1 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">2 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">3 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">4 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-							</ul>
-						</li>
-
-						<li class="pricelist hidden-price" data-product-reference="rural">
-							<ul class="content">
-								<li>
-									<span class="title">1 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">2 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">3 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">4 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-							</ul>
-						</li>
-
-					</ul>
-
+				<div class="switch">
+					<button><span class="fa fa-times"></span> Fechar</button>
 				</div>
-
 			</div>
-
 		</div>
+	</div>
 
-		<div class="frame pricelist-platina">
-
-			<div class="container wide">
-
-				<div class="slide">
-
-					<ul class="nav pills">
-						<li>Residencial</li>
-						<li>Rural</li>
-					</ul>
-
-					<ul class="content">
-
-						<li class="pricelist hidden-price" data-product-reference="residencial">
-							<ul class="content">
-								<li>
-									<span class="title">1 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">2 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">3 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">4 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-							</ul>
-						</li>
-
-						<li class="pricelist hidden-price" data-product-reference="rural">
-							<ul class="content">
-								<li>
-									<span class="title">1 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">2 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">3 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-								<li>
-									<span class="title">4 Mega</span>
-									<span class="description">Upload: 1 MEGA</span>
-								</li>
-							</ul>
-						</li>
-
-					</ul>
-
-				</div>
-
+	<div id="hardware" class="block deep-orange font-white">
+		<div class="container full">
+			<div class="about">
+				<h1>Hardware</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aliquam aliquid asperiores, commodi cumque esse expedita iste laborum nemo perferendis, quam quasi quia quos rerum similique soluta voluptatem? Exercitationem!</p>
 			</div>
-
+			<div class="content"></div>
 		</div>
-
 	</div>
 
-</div>
-
-<footer id="contato" class="block grey-900 font-grey-600 border-grey-600">
-	<div class="about">
-		<span class="address">+55 18 3351 3504 / Webtal Telecom, Palmital, SP, Brasil</span>
-		<span class="copyright">©Webtal Telecom 2015</span>
+	<div id="network" class="block">
+		<div class="container full">
+			<div class="about">
+				<h1>Rede</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut consectetur consequatur culpa cumque dolores ducimus incidunt numquam odio odit quidem repellat tenetur, voluptate. Adipisci aperiam blanditiis commodi delectus voluptatum.</p>
+			</div>
+			<div class="content"></div>
+		</div>
 	</div>
-	<div class="divisor"></div>
-	<div class="about">
-		<a href="//letsmowe.com">
-			<img src="./img/ad.png" alt="Mowe & Kabanas Info"/>
-		</a>
-		<span class="copyright">Desenvolvimento</span>
-	</div>
-</footer>
 
-<script src="dist/js/jquery-2.1.1.min.js"></script>
-<script src="dist/js/app.js"></script>
+	<div id="cloud" class="block deep-orange font-white">
+		<div class="container full">
+			<div class="about">
+				<h1>Nuvem</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis dolorem, et eum ipsam magnam minus odio placeat quidem. Aliquid culpa deleniti dolores facilis, nam non recusandae ut velit veniam!</p>
+			</div>
+			<div class="content"></div>
+		</div>
+	</div>
+
+	<div id="web" class="block">
+		<div class="container full">
+			<div class="about">
+				<h1>Web</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut commodi cumque cupiditate eaque earum, enim exercitationem fugiat in incidunt labore, laudantium libero minus provident quia quo similique temporibus unde?</p>
+			</div>
+			<div class="content"></div>
+		</div>
+	</div>
+
+</main>
+
+<style scoped>
+	body > footer {
+	}
+</style>
+
 <script>
 
-	var city = document.getElementById('city');
-	var pricesWipe = document.getElementById('prices-wipe');
-	distinctCity(city, pricesWipe);
+	var s = document.getElementsByClassName('switch');
 
-	var wipelist = document.getElementsByClassName('wipe');
-	doWipe(wipelist);
+	var switcher;
+	switcher = function() {
+		var a = document.getElementById('support');
+		if (!a.classList.contains('slide-2')) a.classList.add('slide-2');
+		else a.classList.remove('slide-2')
+		console.log('asd');
+	};
+
+	for (var i = s.length; i--; )
+		s[i].getElementsByTagName('button')[0].addEventListener('click', switcher);
+
+	var getHeightRatio;
+	getHeightRatio = function() {
+		return 1 - ( document.documentElement.scrollTop / window.innerHeight );
+	};
+
+	var handleBodyBackground;
+	handleBodyBackground = function() {
+		var e = document.body;
+		var r = getHeightRatio();
+		if (r >= 0) e.style.backgroundColor = 'rgba(230,81,0,' + r + ')';
+		else e.style.backgroundColor = 'rgba(230,81,0,' + 0 + ')';
+	};
+
+//	window.addEventListener('scroll', handleBodyBackground);
+//	window.addEventListener('resize', handleBodyBackground);
 
 </script>
-<script src="dist/js/mowe.min.js"></script>
 
-<script>
-
-</script>
 </body>
