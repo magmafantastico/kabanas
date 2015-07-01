@@ -665,13 +665,15 @@
 
 	window.addEventListener('load', startPhoto);
 
-	var resizeImage = function(img) {
+	var resizeImage;
+	resizeImage = function(img) {
 		var height, ratio, width;
 
-		height = document.getElementById('support').clientHeight - 384;
+		height = document.getElementById('support').clientHeight - 384; // white space of block = 384
 		ratio = (img.clientWidth / img.clientHeight);
 		width = height * ratio;
 
+		// responsive
 		if (width > window.innerWidth) {
 			width = window.innerWidth;
 			height = width / ratio;
