@@ -187,6 +187,18 @@ blockquote {
 .opacity90, .h-opacity90:hover { opacity: 0.9 }
 
 /*
+	Size Box Helpers
+*/
+
+.height-100 {
+	height: 100%;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+/*
     Flex Helpers
 */
 
@@ -222,6 +234,19 @@ blockquote {
 .flex-7 {flex: 7}
 .flex-8 {flex: 8}
 .flex-9 {flex: 9}
+
+/* Text Align */
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
 
 /*
     Background Helpers
@@ -274,8 +299,13 @@ strong {
 */
 
 .container {
+	padding: auto 1em;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.container.full {
+	width: 100%;
 }
 
 @media (max-width: 60em) {
@@ -285,25 +315,50 @@ strong {
 }
 
 @media (min-width: 60em) {
+
 	.container {
-		width: 64em;
+		width: 60em;
 	}
+
 }
 
-@media (min-width: 72em) {
-	.blog {
+@media (max-width: 72em) {
+
+	.container {
+		padding: auto 1em;
+	}
+
+	.container.blog {
 		width: 100%;
 	}
 
-	.wide {
+	.container.wide {
+		width: 100%;
+		max-width: 70em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.container.full {
+		max-width: 70em;
+		padding: auto 1em;
+	}
+
+	.container.wide {
 		width: 100%;
 		max-width: 72em;
 	}
 
-	.full {
-		width: 100%;
-		max-width: 96em;
+}
+
+@media (min-width: 96em) {
+
+	.container.full {
+		max-width: 94em;
 	}
+
 }
 
 /* Grid Padding */

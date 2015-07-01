@@ -456,12 +456,6 @@ button::-moz-focus-inner {
     margin: 2.25em 0;
 }
 
-.block > h1,
-.block .container > h1,
-.block .about h1 {
-    font-weight: 400;
-}
-
 .block > .lead,
 .block .container > .lead,
 .block .about .lead {

@@ -9,8 +9,8 @@
 	<script src="dist/js/villa.js"></script>
 	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>-->
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="dist/css/villa.min.css"/>
-	<link rel="stylesheet" href="dist/css/mowe.min.css"/>
+	<link rel="stylesheet" href="dist/css/villa.css"/>
+	<link rel="stylesheet" href="dist/css/mowe.css"/>
 	<link rel="stylesheet" href="dist/css/font-awesome.css"/>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/villac.css"/>
@@ -41,6 +41,10 @@
 	}
 
 	body > header .border {
+		display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
 		display: flex;
 	}
 
@@ -59,6 +63,22 @@
 		width: 100%;
 	}
 
+	@media screen and (max-width: 60em) {
+
+		.container.full h1,
+		.container.full h2,
+		.container.full h3,
+		.container.full h4,
+		.container.full h5,
+		.container.full h6,
+		.container.full p,
+		.container.full span,
+		.container.full p {
+			padding: 0 16px;
+		}
+
+	}
+
 </style>
 
 <header class="white">
@@ -68,7 +88,7 @@
 		</div>
 		<div class="contact font-light-blue-200">
 			<a href="#contact">
-				<span>+55 18 3351 4181</span>
+				<span>18 3351 4181</span>
 			</a>
 		</div>
 	</div>
@@ -98,6 +118,10 @@
 		}
 
 		.wwd ul {
+			display: -webkit-box;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-around;
@@ -110,6 +134,10 @@
 
 		.wwd li header {
 			color: #ffffff;
+			display: -webkit-box;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -210,23 +238,9 @@
 			min-height: 48em;
 		}
 
-		.block .container {
-			display: flex;
-			flex-direction: column;
-			align-items: stretch;
-		}
-
-		.block .about,
-		.block .content {
-			width: 100%;
-		}
 
 		.block .about p {
 			max-width: 36em;
-		}
-
-		.block .content {
-			flex-grow: 2;
 		}
 
 		.block h1 {
@@ -240,6 +254,22 @@
 			font-weight: 300;
 		}
 
+		@media screen and (max-width: 60em) {
+
+			.block p {
+				font-size: 1.125em;
+			}
+
+		}
+
+		@media screen and (min-width: 96em) {
+
+			.block {
+				min-height: 60em;
+			}
+
+		}
+
 	</style>
 
 	<div id="install" class="block grey-900 font-white">
@@ -247,7 +277,7 @@
 			<div class="about">
 				<header>
 					<h1>Instalação</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, architecto autem, cum dolorum error esse explicabo, laborum laudantium minus odio possimus quae sed veritatis. Deserunt dignissimos ducimus nobis reprehenderit tempora!</p>
+					<p>Servidores, sistemas operacionais (windows, mac e linux) (formatação) e equipamentos de informática.</p>
 				</header>
 				<footer></footer>
 			</div>
@@ -268,11 +298,7 @@
 
 			}
 
-			.block .switch {
-				padding: 1.5em 0;
-			}
-
-			.block .switch button {
+			.block .fb {
 				border: solid 1px;
 				border-color: #1a237e #283593 #303f9f;
 				color: #ffffff;
@@ -281,11 +307,9 @@
 				border-radius: 3px;
 				font-size: 1.125em;
 				line-height: 1.4;
-				padding: .2em 1.125em;
 				background: #0d47a1;
+				padding: .2em 1.125em;
 				cursor: pointer;
-				/*border-color: #435A8B #3C5488 #334C83;*/
-				/*background: #4E69A2;*/
 			}
 
 			.block .switch button:focus,
@@ -300,6 +324,10 @@
 			.block .swip {
 				width: 200%;
 				height: 24em;
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
 				display: flex;
 				flex-direction: row;
 				margin-left: 0;
@@ -312,6 +340,10 @@
 
 			.block .slide {
 				width: 100%;
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
@@ -322,84 +354,282 @@
 				margin-left: -100%;
 			}
 
-			.album {
-				display: flex;
-				flex-direction: row;
-				justify-content: center;
-				width: 100%;
-				height: 100%;
-				opacity: .9;
+			.flat {
+				border: none;
+				padding: 1em 1.125em;
+				cursor: pointer;
+				line-height: 1;
+				text-transform: uppercase;
 			}
 
-			.album img {
-				height: 100%;
+			.flat.grey {
+				background-color: #424242;
+				color: #eeeeee;
 			}
+
+			.flat.grey:hover {
+				background-color: #616161;
+			}
+
+			.flat.grey:active,
+			.flat.grey:focus {
+				background-color: #212121;
+			}
+
+			.flat.large {
+				padding: 1.5em 2.25em;
+			}
+
 		</style>
 		<div class="swip">
 			<div class="slide">
 				<div class="container full">
 					<div class="about">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aperiam commodi cum dolore ducimus eaque eum explicabo facilis id illum, maxime nostrum perspiciatis placeat recusandae, repudiandae sapiente voluptas voluptatibus!</p>
+						<p>Prestação de suporte na loja e também a domicilio para computadores, redes, equipamentos, celulares e tablets.</p>
 					</div>
 					<div></div>
 				</div>
-				<div class="switch">
-					<button>Ver galeria</button>
-				</div>
+				<a class="switch flat large grey">Ver galeria</a>
 			</div>
 			<div class="slide">
+				<style scoped>
+					.album {
+						display: -webkit-box;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-start;
+						margin: 2.25em 0;
+						width: 100%;
+					}
+
+					.album header,
+					.album header .container {
+						display: -webkit-box;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						align-items: stretch;
+					}
+
+					.album header .title {
+						display: -webkit-box;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						width: 100%;
+						padding: 0 1em;
+						font-weight: 600;
+					}
+
+					.album .pictures {
+						display: -webkit-box;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+					}
+
+					.album .pictures .pic {
+						display: none;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+					}
+
+					.album .pictures .active.pic {
+						display: -webkit-box;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+					}
+
+					.album .pictures .pic img {
+						display: block;
+						max-height: 100%;
+						max-width: 100%;
+					}
+
+					.album .pictures .pic footer {
+						padding: .5em 0;
+						width: 100%;
+					}
+
+					.album .pictures .pic footer p {
+						font-size: 1em;
+						font-weight: 400;
+						text-align: center;
+					}
+
+				</style>
 				<div class="container full">
-					<style scoped>
-						.container {
-							height: 100%;
-						}
-					</style>
-					<div class="album grey-900">
-						<img src="img/hardware.jpeg" alt=""/>
+					<div class="album grey-700">
+						<header class="grey-900">
+								<a class="switch flat grey">
+									<span class="fa fa-chevron-left"></span>
+								</a>
+								<div class="title font-grey-300">
+									<span>Album</span>
+								</div>
+								<a id="back" class="flat grey text-right">
+									<span class="fa fa-arrow-left"></span>
+								</a>
+								<a id="next" class="flat grey">
+									<span class="fa fa-arrow-right"></span>
+								</a>
+						</header>
+						<div class="pictures" id="pictures">
+							<div class="pic">
+								<img src="img/moto.jpg" alt="moto"/>
+								<footer class="grey-800 font-grey-300">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nostrum quibusdam repellat.</p>
+								</footer>
+							</div>
+							<div class="pic">
+								<img src="img/tv.jpeg" alt="moto"/>
+								<footer class="grey-800 font-grey-300">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deleniti exercitationem facere, maxime natus temporibus unde veniam? Deserunt eius, fugiat id laboriosam libero minima quo ullam? Accusantium officiis quod veritatis!</p>
+								</footer>
+							</div>
+							<div class="pic">
+								<img src="img/mac.jpeg" alt="moto"/>
+								<footer class="grey-800 font-grey-300">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda earum inventore totam.</p>
+								</footer>
+							</div>
+							<div class="pic">
+								<img src="img/hardware.jpeg" alt="moto"/>
+								<footer class="grey-800 font-grey-300">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus eligendi ipsam numquam optio repellendus suscipit tempore totam.</p>
+								</footer>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="switch">
-					<button><span class="fa fa-times"></span> Fechar</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="hardware" class="block deep-orange font-white">
+	<style>
+		.tags {
+			max-width: 48em;
+			margin-top: 1em;
+		}
+
+		.tags .tag {
+			border-style: solid;
+			border-width: 2px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			font-size: 1em;
+			line-height: 3;
+			padding: .5em 1em;
+			white-space: nowrap;
+			cursor: pointer;
+		}
+
+		.tags .tag:hover {
+		}
+	</style>
+
+	<div id="hardware" class="block teal font-white">
 		<div class="container full">
 			<div class="about">
 				<h1>Hardware</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aliquam aliquid asperiores, commodi cumque esse expedita iste laborum nemo perferendis, quam quasi quia quos rerum similique soluta voluptatem? Exercitationem!</p>
+				<p>Venda de hardware de notebooks, ultrabooks, computadores, servidores, redes e portateis.</p>
+				<div class="tags hover-font-red font-white border-white">
+					<span class="tag h-white hfont-teal">Regravação de BIOS</span>
+					<span class="tag h-white hfont-teal">Recuperação de dados</span>
+					<span class="tag h-white hfont-teal">Manutenção de refrigeração de laptops</span>
+					<span class="tag h-white hfont-teal">Conserto de monitores</span>
+					<span class="tag h-white hfont-teal">Impressoras</span>
+					<span class="tag h-white hfont-teal">Impressoras Laser</span>
+					<span class="tag h-white hfont-teal">Estabilizadores</span>
+					<span class="tag h-white hfont-teal">Nobreaks</span>
+					<span class="tag h-white hfont-teal">Troca de baterias</span>
+					<span class="tag h-white hfont-teal">Reparo de baterias de notebooks</span>
+					<span class="tag h-white hfont-teal">Substituição de telas de laptops</span>
+					<span class="tag h-white hfont-teal">Reparo de teclados de notebooks</span>
+				</div>
 			</div>
 			<div class="content"></div>
 		</div>
 	</div>
 
-	<div id="network" class="block">
+	<div id="network" class="block font-white">
+		<style scoped="scoped">
+			#network {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("img/cub.jpeg");
+			}
+		</style>
 		<div class="container full">
 			<div class="about">
-				<h1>Rede</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut consectetur consequatur culpa cumque dolores ducimus incidunt numquam odio odit quidem repellat tenetur, voluptate. Adipisci aperiam blanditiis commodi delectus voluptatum.</p>
+				<h1>Redes</h1>
+				<p>Instalação, configuração e suporte para estrutura de rede em empresas e residências.</p>
+				<div class="tags border-white">
+					<span class="tag h-white hfont-black hborder-white">Redes domésticas</span>
+					<span class="tag h-white hfont-black hborder-white">Cabeamento estruturado</span>
+					<span class="tag h-white hfont-black hborder-white">Redes ponto a ponto</span>
+					<span class="tag h-white hfont-black hborder-white">VPN (redes privadas de dados via internet)</span>
+					<span class="tag h-white hfont-black hborder-white">Implementação de domínios</span>
+					<span class="tag h-white hfont-black hborder-white">Wireless simples ou estruturado (WLAN)</span>
+					<span class="tag h-white hfont-black hborder-white">Segurança em redes Wireless</span>
+					<span class="tag h-white hfont-black hborder-white">VLANs</span>
+					<span class="tag h-white hfont-black hborder-white">WiMax</span>
+					<span class="tag h-white hfont-black hborder-white">Balanceamento de carga</span>
+				</div>
 			</div>
 			<div class="content"></div>
 		</div>
 	</div>
 
-	<div id="cloud" class="block deep-orange font-white">
+	<div id="cloud" class="block light-blue font-white">
 		<div class="container full">
 			<div class="about">
 				<h1>Nuvem</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis dolorem, et eum ipsam magnam minus odio placeat quidem. Aliquid culpa deleniti dolores facilis, nam non recusandae ut velit veniam!</p>
+				<p>Consultoria de vendas e instalação de serviços em nuvem para acomodar arquivos em cloud.</p>
 			</div>
 			<div class="content"></div>
 		</div>
 	</div>
 
-	<div id="web" class="block">
+	<style scoped="scoped">
+		.center {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+	</style>
+
+	<div id="web" class="block grey-900 font-white">
+		<style scoped="scoped">
+			#web {
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("img/sky.jpeg");
+			}
+		</style>
 		<div class="container full">
 			<div class="about">
-				<h1>Web</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut commodi cumque cupiditate eaque earum, enim exercitationem fugiat in incidunt labore, laudantium libero minus provident quia quo similique temporibus unde?</p>
+				<div class="center">
+					<h1>Web</h1>
+					<p style="width: 100%">Desenvolvimento de websites para empresas e profissionais liberais, hospedagem para sites, e-mails e serviços e sistemas Web.</p>
+					<iframe width="1137" height="640" src="https://www.youtube.com/embed/Q6QZVQOTHJU" frameborder="0" allowfullscreen style="margin-top: 3em;"></iframe>
+				</div>
 			</div>
 			<div class="content"></div>
 		</div>
@@ -420,12 +650,85 @@
 	switcher = function() {
 		var a = document.getElementById('support');
 		if (!a.classList.contains('slide-2')) a.classList.add('slide-2');
-		else a.classList.remove('slide-2')
-		console.log('asd');
+		else a.classList.remove('slide-2');
 	};
 
 	for (var i = s.length; i--; )
-		s[i].getElementsByTagName('button')[0].addEventListener('click', switcher);
+		s[i].addEventListener('click', switcher);
+
+	var startPhoto = function() {
+		var a = document.getElementById('pictures');
+		var b = a.getElementsByClassName('pic')[0];
+		b.classList.add('active');
+		resizeImage(b.getElementsByTagName('img')[0]);
+	};
+
+	window.addEventListener('load', startPhoto);
+
+	var resizeImage = function(img) {
+		var height, ratio, width;
+
+		height = document.getElementById('support').clientHeight - 384;
+		ratio = (img.clientWidth / img.clientHeight);
+		width = height * ratio;
+
+		if (width > window.innerWidth) {
+			width = window.innerWidth;
+			height = width / ratio;
+		}
+
+		img.style.height = height + 'px';
+		img.style.width = width + 'px';
+	};
+
+	var nextPhoto = function() {
+
+		var block, album, next, albumLenght;
+
+		block = document.getElementById('pictures');
+		album = block.getElementsByClassName('pic');
+		albumLenght = album.length;
+		next = false;
+
+		for (var i = 0; i < albumLenght; i++) {
+			if (album[i].classList.contains('active')) {
+				album[i].classList.remove('active');
+				next = i + 1;
+				if (i == (albumLenght - 1)) next = 0;
+			}
+		}
+
+		album[next].classList.add('active');
+
+		resizeImage(album[next].getElementsByTagName('img')[0]);
+
+	};
+
+	var backPhoto = function() {
+
+		var block, album, back, albumLenght;
+
+		block = document.getElementById('pictures');
+		album = block.getElementsByClassName('pic');
+		albumLenght = album.length;
+		back = false;
+
+		for (var i = 0; i < albumLenght; i++) {
+			if (album[i].classList.contains('active')) {
+				album[i].classList.remove('active');
+				back = i - 1;
+				if (i == 0) back = albumLenght - 1;
+				break;
+			}
+		}
+
+		album[back].classList.add('active');
+
+		resizeImage(album[back].getElementsByTagName('img')[0], block);
+	};
+
+	document.getElementById('back').addEventListener('click', backPhoto);
+	document.getElementById('next').addEventListener('click', nextPhoto);
 
 	var getHeightRatio;
 	getHeightRatio = function() {
