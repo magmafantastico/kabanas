@@ -174,8 +174,8 @@
 					<span class="fa fa-windows"></span>
 				</header>
 				<div class="content font-brown-600">
-					<h2>Instalação</h2>
-					<p>Instalamos Windows, Mac e Linux.</p>
+					<h2>Software</h2>
+					<p>Reinstalação de aplicativos e sistemas operacionais (Windows, Mac e Linux).</p>
 				</div>
 			</li>
 			<li>
@@ -184,7 +184,7 @@
 				</header>
 				<div class="content font-brown-600">
 					<h2>Suporte</h2>
-					<p>Fazemos manutenção de computadores.</p>
+					<p>Suporte técnico no local ou por telefone e manutentação de componentes de informática.</p>
 				</div>
 			</li>
 			<li>
@@ -193,7 +193,7 @@
 				</header>
 				<div class="content font-brown-600">
 					<h2>Hardware</h2>
-					<p>Impressoras.</p>
+					<p>Venda e instalação de computadores, impressoras, monitores e nobreaks.</p>
 				</div>
 			</li>
 			<li>
@@ -202,7 +202,7 @@
 				</header>
 				<div class="content font-brown-600">
 					<h2>Rede</h2>
-					<p>Fazemos instalação de redes.</p>
+					<p>Instalação, configuração e manutentação de redes domésticas e corporativas.</p>
 				</div>
 			</li>
 			<li>
@@ -211,7 +211,7 @@
 				</header>
 				<div class="content font-brown-600">
 					<h2>Nuvem</h2>
-					<p>Nossa equipe tem experiência em trazer o armazenamento em nuvem para a sua empresa ou residencia.</p>
+					<p>Consultoria de instalação de serviços de backup em nuvem.</p>
 				</div>
 			</li>
 			<li>
@@ -220,7 +220,7 @@
 				</header>
 				<div class="content font-brown-600">
 					<h2>Web</h2>
-					<p>Temos um catalogo enorme de serviços para a levar a sua empresa para a Web.</p>
+					<p>Desenvolvimento de websites, hospedagem para e-mails, serviços e sistemas Web.</p>
 				</div>
 			</li>
 		</ul>
@@ -272,14 +272,24 @@
 
 	</style>
 
-	<div id="install" class="block grey-900 font-white">
+	<div id="software" class="block grey-900 font-white">
 		<div class="container full">
 			<div class="about">
 				<header>
-					<h1>Instalação</h1>
+					<h1>Software</h1>
 					<p>Servidores, sistemas operacionais (windows, mac e linux) (formatação) e equipamentos de informática.</p>
 				</header>
-				<footer></footer>
+				<div class="tags">
+					<div class="tag">Reinstalação de Sistema Operacional</div>
+					<div class="tag">MacOS</div>
+					<div class="tag">Linux</div>
+					<div class="tag">Windows</div>
+					<div class="tag">Instalação de Aplicativos</div>
+					<div class="tag">Adobe</div>
+					<div class="tag">Corel</div>
+					<div class="tag">Microsoft Office</div>
+					<div class="tag">Backup de arquivos</div>
+				</div>
 			</div>
 			<div class="content"></div>
 		</div>
@@ -667,6 +677,7 @@
 
 	var resizeImage;
 	resizeImage = function(img) {
+
 		var height, ratio, width;
 
 		height = document.getElementById('support').clientHeight - 384; // white space of block = 384
@@ -681,6 +692,7 @@
 
 		img.style.height = height + 'px';
 		img.style.width = width + 'px';
+
 	};
 
 	var nextPhoto = function() {
