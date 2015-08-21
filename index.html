@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="open-sans">
 <head>
 	<meta charset="utf-8"/>
 	<title>Kabanas</title>
@@ -7,9 +7,7 @@
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	<meta name="theme-color" content="#000000"/>
 	<script src="dist/js/villa.js"></script>
-	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>-->
-	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="dist/css/villa.css"/>
+	<link rel="stylesheet" href="dist/css/villa.min.css"/>
 	<link rel="stylesheet" href="dist/css/mowe.css"/>
 	<link rel="stylesheet" href="dist/css/font-awesome.css"/>
 	<!--[if lt IE 9]>
@@ -19,39 +17,159 @@
 	<script src="dist/js/html5shiv-printshiv.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="grey-50">
 
 <style>
-	body {
-		background-color: #fafafa;
+	@-webkit-keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
+
+	@-moz-keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-o-keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadeText {
+		0% {
+			display: none;
+			opacity: 0;
+		}
+		10% {
+			display: block;
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-moz-keyframes fadeText {
+		0% {
+			display: none;
+			opacity: 0;
+		}
+		10% {
+			display: block;
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-o-keyframes fadeText {
+		0% {
+			display: none;
+			opacity: 0;
+		}
+		10% {
+			display: block;
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeText {
+		0% {
+			display: none;
+			opacity: 0;
+		}
+		10% {
+			display: block;
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes colorfull {
+		0% {
+			background-color: #bf360c;
+		}
+		100% {
+			background-color: #fafafa;
+		}
+	}
+
+	@-moz-keyframes colorfull {
+		0% {
+			background-color: #bf360c;
+		}
+		100% {
+			background-color: #fafafa;
+		}
+	}
+
+	@-o-keyframes colorfull {
+		0% {
+			background-color: #bf360c;
+		}
+		100% {
+			background-color: #fafafa;
+		}
+	}
+
+	@keyframes colorfull {
+		0% {
+			background-color: #bf360c;
+		}
+		100% {
+			background-color: #fafafa;
+		}
+	}
+
 </style>
 
-<style scoped>
+<style>
 
 	body > header {
 		border-bottom: solid 1px #eeeeee;
+		border-left: solid 1em #ff5722;
 	}
 
 	body > header h1 {
-		font-family: 'Indie Flower';
 		font-size: 1.75em;
 		line-height: 3;
 		font-weight: 400;
 	}
 
-	body > header .border {
-		display: -webkit-box;
-	    display: -moz-box;
-	    display: -ms-flexbox;
-	    display: -webkit-flex;
-		display: flex;
+	body > header .logo img {
+		/*animation: fade 2s 1 ease;*/
+		height: 10em;
 	}
 
 	body > header .container {
 		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
 	}
 
 	body > header .contact {
@@ -63,43 +181,46 @@
 		width: 100%;
 	}
 
-	@media screen and (max-width: 60em) {
+	body > header .contact {
+		border-bottom: solid 4px #ff5722;
+		font-size: 2.25em;
+		padding: 0 1em;
+	}
 
-		.container.full h1,
-		.container.full h2,
-		.container.full h3,
-		.container.full h4,
-		.container.full h5,
-		.container.full h6,
-		.container.full p,
-		.container.full span,
-		.container.full p {
-			padding: 0 16px;
+	@media (max-width: 96em) {
+
+		body > header {
+			background-color: #ffffff;
+		}
+
+	}
+
+	@media (min-width: 96em) {
+
+		body > header {
+			border: none;
+		}
+
+		body > header .logo {
+			padding: 1.5em 0;
 		}
 
 	}
 
 </style>
 
-<header class="white">
-	<div class="container wide flex">
-		<div class="logo">
-			<h1 class="font-deep-orange">Kabanas<em>Info</em></h1>
-		</div>
-		<div class="contact font-light-blue-200">
-			<a href="#contact">
+<header class="">
+	<div class="flex justify-center align-center">
+		<!--<div class="contact font-light-blue">
+			<a href="#contact" class="font-black">
 				<span>18 3351 4181</span>
 			</a>
+		</div>-->
+		<div class="logo">
+			<!--<h1 class="font-deep-orange">Kabanas<em>Info</em></h1>-->
+			<img src="img/logo-white_Kabanas.png" alt=""/>
 		</div>
 	</div>
-	<!--<div class="border">
-		<span class="indigo"></span>
-		<span class="blue"></span>
-		<span class="teal"></span>
-		<span class="green"></span>
-		<span class="orange"></span>
-		<span class="red"></span>
-	</div>-->
 </header>
 
 <style scoped>
@@ -128,8 +249,9 @@
 		}
 
 		.wwd li {
-			width: 16em;
+			width: 18em;
 			padding: 1em .75em 1.125em;
+			align-items: center;
 		}
 
 		.wwd li header {
@@ -165,11 +287,66 @@
 			display: none;
 		}
 
+		@media (max-width: 96em) {
+
+			.wwd li {
+				background: none;
+			}
+
+		}
+
+		@media (min-width: 96em) {
+
+			main {
+				margin-top: 0;
+			}
+
+			.wwd {
+				margin-bottom: 0;
+			}
+
+			.wwd.container {
+				max-width: 100%;
+				width: 100%;
+			}
+
+			.wwd ul {
+				padding: 0 2.25em 2.25em;
+			}
+
+			.wwd li {
+				cursor: pointer;
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				flex-wrap: nowrap;
+				flex-grow: 1;
+				flex-direction: column;
+				justify-content: flex-start;
+				padding: .5em 1em 1.125em;
+				min-height: 24em;
+				width: 16em;
+			}
+
+			.wwd li .content {
+				color: #ffffff;
+				text-align: center;
+			}
+
+			.wwd li .content p {
+				margin-top: 1em;
+				font-size: 1.125em;
+			}
+
+		}
+
 	</style>
 
 	<div class="wwd container">
 		<ul>
-			<li>
+			<li class="blue">
 				<header class="blue" style="border-top-left-radius: 25%;">
 					<span class="fa fa-windows"></span>
 				</header>
@@ -178,7 +355,7 @@
 					<p>Reinstalação de aplicativos e sistemas operacionais (Windows, Mac e Linux).</p>
 				</div>
 			</li>
-			<li>
+			<li class="orange">
 				<header class="orange">
 					<span class="fa fa-ambulance"></span>
 				</header>
@@ -187,7 +364,7 @@
 					<p>Suporte técnico no local ou por telefone e manutentação de componentes de informática.</p>
 				</div>
 			</li>
-			<li>
+			<li class="green">
 				<header class="green">
 					<span class="fa fa-laptop"></span>
 				</header>
@@ -196,7 +373,7 @@
 					<p>Venda e instalação de computadores, impressoras, monitores e nobreaks.</p>
 				</div>
 			</li>
-			<li>
+			<li class="red">
 				<header class="red">
 					<span class="fa fa-connectdevelop"></span>
 				</header>
@@ -205,7 +382,7 @@
 					<p>Instalação, configuração e manutentação de redes domésticas e corporativas.</p>
 				</div>
 			</li>
-			<li>
+			<li class="teal">
 				<header class="teal">
 					<span class="fa fa-cloud"></span>
 				</header>
@@ -214,7 +391,7 @@
 					<p>Consultoria de instalação de serviços de backup em nuvem.</p>
 				</div>
 			</li>
-			<li>
+			<li class="indigo">
 				<header class="indigo" style="border-bottom-right-radius: 25%;">
 					<span class="fa fa-globe"></span>
 				</header>
@@ -573,7 +750,6 @@
 		</div>
 		<div class="container full">
 			<div class="about">
-				<h1>Hardware</h1>
 				<p>Venda de hardware de notebooks, ultrabooks, computadores, servidores, redes e portateis.</p>
 				<div class="tags hover-font-red font-white border-white">
 					<span class="tag h-white hfont-teal">Regravação de BIOS</span>
@@ -667,7 +843,7 @@
 			<div class="about">
 				<div class="center">
 					<p style="width: 100%">Desenvolvimento de websites para empresas e profissionais liberais, hospedagem para sites, e-mails e serviços e sistemas Web.</p>
-					<iframe width="1137" height="640" src="https://www.youtube.com/embed/Q6QZVQOTHJU" frameborder="0" allowfullscreen style="margin-top: 3em;"></iframe>
+					<!--<iframe width="1137" height="640" src="https://www.youtube.com/embed/Q6QZVQOTHJU" frameborder="0" allowfullscreen style="margin-top: 3em;"></iframe>-->
 					<div class="tags">
 						<span class="tag h-white hborder-white hfont-grey-900">Desenvolvimento de Websites</span>
 						<span class="tag h-white hborder-white hfont-grey-900">Cartão de visita Web</span>
