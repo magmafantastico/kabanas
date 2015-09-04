@@ -19,138 +19,7 @@
 </head>
 <body class="grey-50">
 
-<style>
-	@-webkit-keyframes fade {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-moz-keyframes fade {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-o-keyframes fade {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes fade {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes fadeText {
-		0% {
-			display: none;
-			opacity: 0;
-		}
-		10% {
-			display: block;
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-moz-keyframes fadeText {
-		0% {
-			display: none;
-			opacity: 0;
-		}
-		10% {
-			display: block;
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-o-keyframes fadeText {
-		0% {
-			display: none;
-			opacity: 0;
-		}
-		10% {
-			display: block;
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes fadeText {
-		0% {
-			display: none;
-			opacity: 0;
-		}
-		10% {
-			display: block;
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes colorfull {
-		0% {
-			background-color: #bf360c;
-		}
-		100% {
-			background-color: #fafafa;
-		}
-	}
-
-	@-moz-keyframes colorfull {
-		0% {
-			background-color: #bf360c;
-		}
-		100% {
-			background-color: #fafafa;
-		}
-	}
-
-	@-o-keyframes colorfull {
-		0% {
-			background-color: #bf360c;
-		}
-		100% {
-			background-color: #fafafa;
-		}
-	}
-
-	@keyframes colorfull {
-		0% {
-			background-color: #bf360c;
-		}
-		100% {
-			background-color: #fafafa;
-		}
-	}
-
-</style>
-
-<style>
+<style scoped>
 
 	body > header {
 		border-bottom: solid 1px #eeeeee;
@@ -205,6 +74,10 @@
 			padding: 1.5em 0;
 		}
 
+		body > header .logo img {
+			height: 12em;
+		}
+
 	}
 
 </style>
@@ -223,17 +96,14 @@
 	</div>
 </header>
 
-<style scoped>
-
-	main {
-		margin-top: 6em;
-	}
-
-</style>
-
-<main class="">
+<main>
 
 	<style scoped>
+
+		main {
+			margin-top: 6em;
+		}
+
 		.wwd {
 			margin-bottom: 6em;
 		}
@@ -249,9 +119,17 @@
 		}
 
 		.wwd li {
-			width: 18em;
-			padding: 1em .75em 1.125em;
 			align-items: center;
+			cursor: pointer;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 1em .75em 1.125em;
+			width: 18em;
 		}
 
 		.wwd li header {
@@ -264,6 +142,7 @@
 			align-items: center;
 			justify-content: center;
 			min-height: 12em;
+			width: 100%;
 		}
 
 		.wwd li header .fa {
@@ -285,6 +164,51 @@
 
 		.wwd.only-head li .content {
 			display: none;
+		}
+
+		@media (max-width: 36em) {
+
+			main {
+				margin-top: 1.5em;
+			}
+
+			.wwd ul {
+				padding: 0 .5em 2.25em;
+			}
+
+			.wwd li {
+				padding: 1em 2px 0;
+				width: 10em;
+			}
+
+			.wwd li header {
+				color: #ffffff;
+				align-items: center;
+				justify-content: center;
+				min-height: 8em;
+				width: 100%;
+			}
+
+			.wwd li header .fa {
+				font-size: 4.5em;
+			}
+
+			.wwd li .content {
+				text-align: center;
+			}
+
+		    .wwd li .content p {
+			    display: none;
+		    }
+
+		}
+
+		@media (max-width: 320px) {
+
+			.wwd li {
+				width: 8em;
+			}
+
 		}
 
 		@media (max-width: 96em) {
@@ -315,16 +239,8 @@
 			}
 
 			.wwd li {
-				cursor: pointer;
-				display: -webkit-box;
-				display: -moz-box;
-				display: -ms-flexbox;
-				display: -webkit-flex;
-				display: flex;
 				flex-wrap: nowrap;
 				flex-grow: 1;
-				flex-direction: column;
-				justify-content: flex-start;
 				padding: .5em 1em 1.125em;
 				min-height: 24em;
 				width: 16em;
