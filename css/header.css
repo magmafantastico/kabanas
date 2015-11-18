@@ -62,17 +62,21 @@
 	transition: fill .6s;
 }
 
-.MainLogo-select-area .MainLogo-svg .logo {
-	fill: #ff5722;
-}
-
-.MainLogo-select-area .MainLogo-svg .type {
-	fill: #231f20;
-}
-
 .MainLogo-img {
 	display: none;
 	height: 10em;
+}
+
+@media (max-width: 36em) {
+
+	.MainLogo-select-area .MainLogo-svg .logo {
+		fill: #ff5722;
+	}
+
+	.MainLogo-select-area .MainLogo-svg .type {
+		fill: #231f20;
+	}
+
 }
 
 @media (min-width: 36em) {
