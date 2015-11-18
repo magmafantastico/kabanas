@@ -1,0 +1,185 @@
+.InfoBox {
+	align-items: center;
+	cursor: pointer;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 1em 0 1.125em;
+	-webkit-transition: background .3s, color .3s;
+	-moz-transition: background .3s, color .3s;
+	-ms-transition: background .3s, color .3s;
+	-o-transition: background .3s, color .3s;
+	transition: background .3s, color .3s;
+	width: 100%;
+}
+
+.InfoBox h1 {
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.InfoBox-header {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.InfoBox-header .icon {
+	font-size: 2.25em;
+}
+
+.InfoBox-body {
+	text-align: center;
+}
+
+.InfoBox-body p {
+	display: none;
+}
+
+@media (max-width: 36em) {
+
+	.InfoBox {
+		max-width: 9em;
+		max-height: 9em;
+	}
+
+	.InfoBox--contact {
+		margin: 1em 0;
+	}
+
+	.InfoBox-header .icon {
+		font-size: 3em;
+	}
+
+	.InfoBox h1 {
+		font-size: 1.125em;
+	}
+
+	.InfoBox-header {
+		padding: 1em 0 .5em;
+	}
+
+	.InfoBox-body {
+		padding: .5em 0;
+	}
+
+}
+
+@media (min-width: 36em) {
+
+	.InfoBox--contact {
+		border-radius: 0 0 3px 3px;
+		background-color: rgba(255,109,0,.36);
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+		max-width: 9em;
+		max-height: 9em;
+	}
+
+	.InfoBox--contact:hover {
+		background-color: rgba(255,109,0,1);
+	}
+
+	.InfoBox--wwd {
+		background-color: rgba(0,0,0,.36);
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+	}
+
+	.InfoBox--wwd:first-of-type {
+		border-bottom-left-radius: 3px;
+	}
+
+	.InfoBox--wwd:last-of-type {
+		border-bottom-right-radius: 3px;
+	}
+
+	.InfoBox {
+
+	}
+
+	.InfoBox-header .icon {
+		font-size: 3em;
+	}
+
+	.InfoBox h1 {
+		font-size: 1.125em;
+	}
+
+	.InfoBox-header {
+		padding: 1em 0 .5em;
+	}
+
+	.InfoBox-body {
+		padding: .5em 0;
+	}
+
+}
+
+@media (max-width: 48em) {
+
+	.InfoBox--contact {
+		width: 16em;
+	}
+
+}
+
+@media (min-width: 48em) {
+
+	.InfoBox {
+		flex-wrap: nowrap;
+		flex-grow: 1;
+		padding: .5em 0 1em;
+		max-width: 9em;
+		max-height: 12em;
+	}
+
+	.InfoBox h1 {
+		font-size: 1.5em;
+	}
+
+	.InfoBox-header {
+		padding: 1.5em 0;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.InfoBox-header {
+		padding: 1.125em 0;
+	}
+
+	.InfoBox-header .icon {
+		font-size: 4.5em;
+	}
+
+	.InfoBox-body {
+		padding: .5em 0;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.InfoBox-header {
+		padding: 1.5em 0;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	.InfoBox-body {
+		padding: 1em 0;
+	}
+
+	.InfoBox {
+		max-width: 10em;
+	}
+
+}

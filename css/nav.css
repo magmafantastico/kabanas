@@ -1,0 +1,39 @@
+.MainNav {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+	margin-bottom: 1.5em;
+}
+
+@media (min-width: 36em) {
+
+	.MainNav {
+		-webkit-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+
+}
+
+@media (min-width: 48em) {
+
+	.MainNav {
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.MainNav {
+		-webkit-justify-content: center;
+		justify-content: center;
+	}
+
+}

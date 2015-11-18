@@ -1,0 +1,134 @@
+/* Header */
+
+.MainHeader {
+	border-left: solid 1em #ff5722;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+.MainHeader h1 {
+	font-size: 1.75em;
+	line-height: 3;
+	font-weight: 400;
+}
+
+.MainHeader .border span {
+	height: 1px;
+	width: 100%;
+}
+
+/* Logo */
+
+.MainLogo {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.MainLogo-select-area {
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 1.125em 3em;
+	-webkit-transition: background .3s;
+	-moz-transition: background .3s;
+	-ms-transition: background .3s;
+	-o-transition: background .3s;
+	transition: background .3s;
+}
+
+.MainLogo-select-area:hover {
+	background-color: rgba(255,255,255,1);
+}
+
+.MainLogo-svg {
+	height: 8em;
+}
+
+.MainLogo-svg .logo,
+.MainLogo-svg .type {
+	-webkit-transition: fill .6s;
+	-moz-transition: fill .6s;
+	-ms-transition: fill .6s;
+	-o-transition: fill .6s;
+	transition: fill .6s;
+}
+
+.MainLogo-select-area .MainLogo-svg .logo {
+	fill: #ff5722;
+}
+
+.MainLogo-select-area .MainLogo-svg .type {
+	fill: #231f20;
+}
+
+.MainLogo-img {
+	display: none;
+	height: 10em;
+}
+
+@media (min-width: 36em) {
+
+	.MainHeader {
+		padding: 1.125em;
+		height: 100vh;
+	}
+
+	.MainLogo-svg .logo,
+	.MainLogo-svg .type {
+		fill: #ffffff;
+	}
+
+	.MainLogo-select-area:hover .MainLogo-svg .logo {
+		fill: #ff5722;
+	}
+
+	.MainLogo-select-area:hover .MainLogo-svg .type {
+		fill: #231f20;
+	}
+
+}
+
+@media (min-width: 48em) {
+
+	.MainHeader {
+		background-color: rgba(0,0,0,.18);
+		/*background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879f2b?ixlib=rb-0.3.5&q=80&fm=jpg&s=9486c9d5373bd6a37a9d03ea3b63c565');*/
+		background-image: url('https://images.unsplash.com/photo-1445964047600-cdbdb873673d?ixlib=rb-0.3.5&q=80&fm=jpg&s=152d73d177d81f21f04f7ea9f65754e0');
+		padding: 2.25em;
+	}
+
+	.MainLogo-svg {
+		height: 10em;
+	}
+
+}
+
+@media (max-width: 96em) {
+
+	.MainHeader {
+		background-color: #ffffff;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	.MainHeader {
+		border: none;
+		padding: 3em;
+	}
+
+	.MainLogo-img {
+		height: 12em;
+	}
+
+}

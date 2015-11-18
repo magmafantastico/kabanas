@@ -1,0 +1,57 @@
+/*
+	Contact Info
+*/
+
+.Contact {
+	/*margin: 3em 0 4.5em;*/
+	padding: 0 1em;
+	border-style: dashed;
+	border-width: 6px;
+	height: 16em;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.Contact .contact-info-wrapper {
+	cursor: pointer;
+	max-width: 48em;
+	padding: 2em 1em;
+	width: 100%;
+}
+
+.Contact .contact-info-wrapper h1,
+.Contact .contact-info-wrapper .number {
+	font-weight: 300;
+}
+
+.Contact .contact-info-wrapper h1 {
+	font-size: 2.25em;
+}
+
+.Contact .contact-info-wrapper .number {
+	font-size: 4.5em;
+}
+
+@media (max-width: 48em) {
+
+	.Contact {
+		margin: 1.5em 0 3em;
+		padding: 0 1em;
+	}
+
+	.Contact .contact-info-wrapper {
+		max-width: 24em;
+	}
+
+	.Contact .contact-info-wrapper h1 {
+		font-size: 1.5em;
+	}
+
+	.Contact .contact-info-wrapper .number {
+		font-size: 2.25em;
+	}
+
+}

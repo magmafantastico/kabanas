@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<title>Document</title>
+
+<style>
+
+	body {
+		margin: 0;
+	}
+
+	#main {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		opacity: 0;
+		transition: opacity 2.25s ease-out;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top;
+	}
+
+	#main.bg {
+		background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879f2b?ixlib=rb-0.3.5&q=80&fm=jpg&s=9486c9d5373bd6a37a9d03ea3b63c565');
+		opacity: 1;
+	}
+
+	#img {
+		display: none;
+	}
+
+</style>
+
+<div id="main"></div>
+
+<img id="img" src="https://images.unsplash.com/photo-1446080501695-8e929f879f2b?ixlib=rb-0.3.5&q=80&fm=jpg&s=9486c9d5373bd6a37a9d03ea3b63c565" alt=""/>
+
+<script>
+
+	/**
+	 @param {object} element
+	 @param {string} type
+	 @param {string} crossType
+	 @param {Function} listener
+	 @param {boolean} [useCapture]
+	 */
+	var addListener = function(element, type, crossType, listener, useCapture) {
+		if (window.addEventListener)
+			element.addEventListener(type, listener, !!useCapture);
+		else element.attachEvent(crossType ? crossType : type, listener);
+	};
+
+	addListener(document.getElementById('img'), 'load', 'onload', function() {
+		console.log('hehe');
+		document.getElementById('main').style.height = window.innerHeight || document.documentElement.clientHeight + 'px';
+		document.getElementById('main').setAttribute('class', 'bg');
+	}, false);
+
+</script>
+
+</html>

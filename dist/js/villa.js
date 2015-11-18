@@ -1,5 +1,5 @@
 /*!
- * Villa Framework v2.6.0 (http://getvilla.org/)
+ * Villa Framework v2.8.7 (http://getvilla.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
@@ -22,21 +22,16 @@ var colorFactory;
 colorFactory = function() {
 	var styleSheetString = [];
 
-	for (var i = 0; i < colors.length; i++) {
+	for (var i = colors.length; i--; ) {
+		var name = colors[i][0];
+		var value = colors[i][1];
+
 		styleSheetString.push(
-			['.' + colors[i][0], [['background-color', colors[i][1]]]],
-			['.font-' + colors[i][0], [['color', colors[i][1]]]],
-			['.border-' + colors[i][0], [['border-color', colors[i][1]]]],
-			['.a-' + colors[i][0] + ':active', [['background-color', colors[i][1]]]],
-			['.afont-' + colors[i][0] + ':active', [['color', colors[i][1]]]],
-			['.aborder-' + colors[i][0] + ':active', [['border-color', colors[i][1]]]],
-			['.f-' + colors[i][0] + ':focus', [['background-color', colors[i][1]]]],
-			['.ffont-' + colors[i][0] + ':focus', [['color', colors[i][1]]]],
-			['.fborder-' + colors[i][0] + ':focus', [['border-color', colors[i][1]]]],
-			['.h-' + colors[i][0] + ':hover', [['background-color', colors[i][1]]]],
-			['.hfont-' + colors[i][0] + ':hover', [['color', colors[i][1]]]],
-			['.hborder-' + colors[i][0] + ':hover', [['border-color', colors[i][1]]]]
+			['.' + name + ', .a-' + name + ':active' + ', .f-' + name+ ':focus' + ', .h-' + name+ ':hover', [['background-color', value]]],
+			['.font-' + name + ', .afont-' + name+ ':active' + ', .ffont-' + name+ ':focus' + ', .hfont-' + name+ ':hover', [['color', value]]],
+			['.border-' + name + ', .aborder-' + name+ ':active' + ', .fborder-' + name+ ':focus' + ', .hborder-' + name+ ':hover', [['border-color', value]]]
 		);
+
 	}
 
 	var villaApi = [
@@ -54,6 +49,175 @@ colorFactory = function() {
 	addStylesheetRules(styleSheetString);
 	addStylesheetRules(villaApi);
 };
+
+/**
+ * Villa Flex v3.0.0 (http://getvilla.org/)
+ * Copyright 2013-2015 Noibe Developers
+ * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
+ */
+var buildFlex;
+buildFlex = function() {
+
+	// start styles array and build flex
+
+	var i, a, b, styles = [];
+
+	// flex helpers
+
+	styles.push({
+		selector: '.flex, .child-flex > *, .extends-flex *',
+		properties: [
+			['display', '-webkit-box'],
+			['display', '-moz-box'],
+			['display', '-ms-flexbox'],
+			['display', '-webkit-flex'],
+			['display', 'flex']
+		]
+	});
+
+	// build align rules
+
+	var flexAlignValues = [
+		'baseline',
+		'center',
+		['end'],
+		['start'],
+		'stretch'
+	];
+
+	for (i = flexAlignValues.length; i--; ) {
+
+		if (flexAlignValues[i] instanceof Array) {
+			a = flexAlignValues[i][0];
+			b = 'flex-' + flexAlignValues[i][0];
+		} else {
+			a = flexAlignValues[i];
+			b = a;
+		}
+
+		styles.push({
+			selector: '.flex.align' + '-' + a + ', .flex.child-align' + '-' + a + ' > *',
+			properties: [
+				['-webkit-align-items' , b],
+				['align-items' , b]
+			]
+		});
+
+		styles.push({
+			selector: '.flex.content' + '-' + a,
+			properties: [
+				['-webkit-align-content' , b],
+				['align-content' , b]
+			]
+		});
+
+		styles.push({
+			selector: '.flex .self' + '-' + a,
+			properties: [
+				['-webkit-align-self' , b],
+				['align-self' , b]
+			]
+		});
+
+	}
+
+	// build flex direction rules
+
+	var flexDirectionValues = [
+		'column',
+		'column-reverse',
+		'row',
+		'row-reverse'
+	];
+
+	for (i = flexDirectionValues.length; i--; ) {
+		a = flexDirectionValues[i];
+		styles.push({
+			selector: '.flex-' + a + ', .child-flex' + a + ' > *, .extends-flex' + a + ' *',
+			properties: [
+				['-ms-flex-direction', a],
+				['-webkit-flex-direction', a],
+				['flex-direction', a]
+			]
+		});
+	}
+
+	// build flex grow and order rules
+
+	styles.push({
+		selector: '.flex.child-grow-1 > *',
+		properties: [
+			['-webkit-flex-grow', '1'],
+			['flex-grow', '1']
+		]
+	});
+
+	for (i = 64 + 1; --i; ) {
+
+		styles.push({
+			selector: '.flex .grow-' + i,
+			properties: [
+				['-webkit-flex-grow', '' + i],
+				['flex-grow', '' + i]
+			]
+		});
+
+		styles.push({
+			selector: '.flex .order-' + i,
+			properties: [
+				['order', '' + i]
+			]
+		});
+
+	}
+
+	// build flex wrap rules
+
+	var flexWrapValues = [
+		'wrap',
+		'nowrap'
+	];
+
+	for (i = flexWrapValues.length; i--; ) {
+		a = flexWrapValues[i];
+		styles.push({
+			selector: '.flex-' + a + ', .child-flex-' + a + ' > *' + ', .extends-flex-' + a + ' *',
+			properties: [
+				['-ms-flex-wrap', a],
+				['-webkit-flex-wrap', a],
+				['flex-wrap', a]
+			]
+		});
+	}
+
+	// build justify content
+
+	var justifyValues = [
+		['center'],
+		['end', 'flex'],
+		['start', 'flex'],
+		['between', 'space'],
+		['around', 'space']
+	];
+
+	for (i = justifyValues.length; i--; ) {
+		a = justifyValues[i][0];
+		b = (justifyValues[i][1]) ? justifyValues[i][1] : false;
+
+		styles.push({
+			selector: '.justify-' + a + ', .child-justify-' + a + ' > *',
+			properties: [
+				['-webkit-justify-content', ((b) ? b + '-' : '') + a],
+				['justify-content', ((b) ? b + '-' : '') + a]
+			]
+		});
+
+	}
+
+	addStylesheetRules(styles);
+
+};
+
 
 /**
  * Villa Foundation v3.0.0 (http://getvilla.org/)
@@ -99,11 +263,35 @@ buildFoundation = function() {
 var buildGrid;
 buildGrid = function() {
 
-	var i, j, p, u, rules, styles;
+	var i, j, k, p, u, r, s = [];
 
 	u = 100 / 12;
 
-	rules = [
+	s.push({
+		selector: ".col:before",
+		properties: [
+			['content', 'hehe']
+		]
+	});
+
+	s.push({
+		selector: "[class*='col-xs'], [class*='col-sm'], [class*='col-md'], [class*='col-lg']",
+		properties: [
+			['position', 'relative'],
+			['min-height', '1px']
+		]
+	});
+
+	s.push({
+		selector: "[class*='col-xl']",
+		properties: [
+			['float', 'left']
+		]
+	});
+
+	// non media rules
+
+	r = [
 		{
 			prefix: '.col-xs-',
 			properties: 'width',
@@ -126,21 +314,85 @@ buildGrid = function() {
 		}
 	];
 
-	styles = [];
-
 	for (i = 12 + 1; i--; )
-		if (rules.length) {
+		if (r.length) {
 			p = u * i;
 			if (p) p += '%';
-			for (j = rules.length; j--; )
-				if ((i > 0) || ((i === 0) && (rules[j].zero)))
-					styles.push([
-						rules[j].prefix + i,
-						[[rules[j].properties, p]]
+			for (j = r.length; j--; )
+				if ((i > 0) || ((i === 0) && (r[j].zero)))
+					s.push([
+						r[j].prefix + i,
+						[[r[j].properties, p]]
 					]);
 		}
 
-	addStylesheetRules(styles);
+	// media rules
+
+	var m = [
+		['sm', 36],
+		['md', 48],
+		['lg', 60],
+		['xl', 72]
+	];
+
+	for (k = m.length; k--; ) {
+
+		var name = m[k][0];
+		var size = m[k][1];
+
+		var media = {
+			type: 'media',
+			features: '(min-width: ' + size + 'em)',
+			rules: []
+		};
+
+		media.rules.push({
+			selector: "[class*='col-" + name + "']",
+			properties: [
+				['float', 'left']
+			]
+		});
+
+		var mediaRules = [
+			{
+				prefix: '.col-' + name + '-',
+				properties: 'width',
+				zero: false
+			},
+			{
+				prefix: '.col-' + name + '-pull-',
+				properties: 'right',
+				zero: true
+			},
+			{
+				prefix: '.col-' + name + '-push-',
+				properties: 'left',
+				zero: true
+			},
+			{
+				prefix: '.col-' + name + '-offset-',
+				properties: 'margin-left',
+				zero: true
+			}
+		];
+
+		for (i = 12 + 1; i--; )
+			if (mediaRules.length) {
+				p = u * i;
+				if (p) p += '%';
+				for (j = mediaRules.length; j--; )
+					if ((i > 0) || ((i === 0) && (mediaRules[j].zero)))
+						media.rules.push([
+							mediaRules[j].prefix + i,
+							[[mediaRules[j].properties, p]]
+						]);
+			}
+
+		s.push(media);
+
+	}
+
+	addStylesheetRules(s);
 
 };
 
@@ -199,7 +451,13 @@ var WebFontFamilies = [
 		className: 'lato',
 		displayType: 'sans-serif',
 		name: 'Lato',
-		properties: 'Lato:400,300,600,700,800:latin'
+		properties: 'Lato:400,900,700,300,100:latin'
+	},
+	{
+		className: 'lato-italic',
+		displayType: 'sans-serif',
+		name: 'Lato',
+		properties: 'Lato:400,900italic,900,700italic,700,400italic,300italic,300,100italic,100:latin'
 	},
 	{
 		className: 'open-sans',
@@ -269,6 +527,7 @@ getWebFont = function () {
 
 (function () {
 	buildFoundation();
+	buildFlex();
 	buildGrid();
 	colorFactory();
 	getWebFont();
@@ -276,7 +535,7 @@ getWebFont = function () {
 
 var addEvent = function(a, b) {
 	if (window.attachEvent) window.attachEvent(a, b);
-	else if (window.addEventListener) window.addEventListener(a, b);
+	else window.addEventListener(a, b);
 };
 
 addEvent('resize', updateResize);
