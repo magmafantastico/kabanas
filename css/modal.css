@@ -6,6 +6,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	padding: 2.25em;
 }
 
 .Modal.is-active {
@@ -33,16 +34,9 @@
 	left: 0;
 	opacity: 0;
 	position: fixed;
+	top: 0;
 	width: 100%;
 	z-index: 999;
-}
-
-.ModalWrapper {
-	height: 100%;
-	padding: 2em;
-	position: absolute;
-	width: 100%;
-	z-index: 1000;
 }
 
 .ModalInner {
@@ -58,6 +52,7 @@
 	transform: scale(.8);
 	height: 100%;
 	width: 100%;
+	z-index: 1000;
 }
 
 .Modal.is-active .ModalInner {

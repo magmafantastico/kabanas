@@ -17,6 +17,10 @@ var Modal = (function() {
 
 		this.viewport = viewport;
 
+		this.wrapper = {};
+
+		this.backdrop = {};
+
 		this.active = false;
 
 		this.triggerCtrl = function() {
@@ -88,14 +92,29 @@ var Modal = (function() {
 
 	};
 
+	Modal.prototype.getBackDrop = function() {
+
+		if (this.backdrop.viewport = this.viewport.querySelector('.ModalBackDrop'))
+			addListener(this.backdrop.viewport, 'click', 'onclick', this.closeCtrl, false);
+
+	};
+
 	Modal.prototype.addListeners = function() {
 
 		this.getCloseButton();
+		this.getBackDrop();
+
+	};
+
+	Modal.prototype.getModalInner = function() {
+
+		this.wrapper.viewport = this.viewport.querySelector('.ModalWrapper');
 
 	};
 
 	Modal.prototype.init = function() {
 
+		this.getModalInner();
 		this.addListeners();
 
 		this.active = false;
