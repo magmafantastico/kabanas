@@ -17,15 +17,31 @@ var Modal = (function() {
 
 		this.viewport = viewport;
 
-		this.wrapper = {};
+		this.inner = {};
 
 		this.backdrop = {};
 
 		this.active = false;
 
+		this.prevent = false;
+
 		this.triggerCtrl = function() {
 
 			self.toggle();
+
+		};
+
+		this.backdropClickCtrl = function() {
+
+			if (!self.prevent)
+				self.close();
+			else self.prevent = !self.prevent;
+
+		};
+
+		this.innerClickCtrl = function() {
+
+			self.prevent = true;
 
 		};
 
@@ -43,9 +59,14 @@ var Modal = (function() {
 
 		this.escapeCtrl = function(event) {
 
-			if (self.active)
-				if (event.keyCode == 27)
+			if (self.active) {
+
+				var key = event.charCode ? event.charCode : event.keyCode ? event.keyCode : 0;
+
+				if (key == 27)
 					self.close();
+
+			}
 
 		};
 
@@ -102,8 +123,10 @@ var Modal = (function() {
 
 	Modal.prototype.getBackDrop = function() {
 
-		if (this.backdrop.viewport = this.viewport.querySelector('.ModalBackDrop'))
-			addListener(this.backdrop.viewport, 'click', 'onclick', this.closeCtrl, false);
+		if (!(this.backdrop.viewport = this.viewport.querySelector('.ModalBackDrop')))
+			this.backdrop.viewport = this.viewport;
+
+		addListener(this.backdrop.viewport, 'click', 'onclick', this.backdropClickCtrl, false);
 
 	};
 
@@ -114,13 +137,14 @@ var Modal = (function() {
 		this.getCloseButton();
 		this.getBackDrop();
 
-		window.addEventListener('keypress', this.escapeCtrl, false);
+		window.addEventListener('keydown', this.escapeCtrl, false);
 
 	};
 
 	Modal.prototype.getModalInner = function() {
 
-		this.wrapper.viewport = this.viewport.querySelector('.ModalWrapper');
+		if (this.inner.viewport = this.viewport.querySelector('.ModalInner'))
+			addListener(this.inner.viewport, 'click', 'onclick', this.innerClickCtrl, false);
 
 	};
 

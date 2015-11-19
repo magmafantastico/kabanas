@@ -2,15 +2,25 @@
 	display: none;
 	height: 100%;
 	left: 0;
+	padding: 2.25em;
 	pointer-events: none;
 	position: fixed;
 	top: 0;
 	width: 100%;
-	padding: 2.25em;
+	z-index: 998;
 }
 
 .Modal.is-active {
 	pointer-events: auto;
+}
+
+.ModalWrapper {
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
 }
 
 .ModalBackDrop,
@@ -23,7 +33,7 @@
 	transition: opacity .6s linear;
 }
 
-.Modal.is-active .ModalBackDrop,
+.ModalBackDrop.is-active,
 .Modal.is-active .ModalInner {
 	opacity: 1;
 }
@@ -52,7 +62,6 @@
 	transform: scale(.8);
 	height: 100%;
 	width: 100%;
-	z-index: 1000;
 }
 
 .Modal.is-active .ModalInner {
@@ -61,4 +70,119 @@
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
 	transform: scale(1);
+}
+
+/* Kabanas Style */
+
+.Modal--kabanas .ModalInner {
+	background-color: #ffffff;
+	border-radius: 2px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+.Modal--kabanas .ModalHeight,
+.Modal--kabanas .ModalBody {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.Modal--kabanas .ModalHeader {
+	height: 3em;
+}
+
+.Modal--kabanas .ModalBody {
+	padding: 0 1em;
+}
+
+.Modal--kabanas .ModalClose {
+	border-radius: 0 2px 0 0;
+	color: #dd2c00;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 100%;
+	padding: 0 1.5em;
+	cursor: default;
+}
+
+.Modal--kabanas .ModalClose:hover {
+	background-color: #ff9e80;
+}
+
+.Modal--kabanas .ModalClose:active,
+.Modal--kabanas .ModalClose:focus {
+	color: #ffffff;
+	background-color: #ff3d00;
+}
+
+.Modal--kabanas .ModalClose span {
+	line-height: 1;
+}
+
+.Modal--kabanas .ModalClose .text {
+	font-size: .875em;
+	font-weight: 900;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-top: 3px;
+	margin-right: .5em;
+}
+
+.Modal--kabanas .ModalClose .icon {
+	font-size: 1.3125em;
+}
+
+.Modal--kabanas h1 {
+	font-size: 2.25em;
+	font-weight: 100;
+	line-height: 1.3;
+	text-align: center;
+	margin-bottom: 2.25em;
+}
+
+.Modal--kabanas p {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+@media (min-width: 36em) {
+
+	.Modal--kabanas h1 {
+		font-size: 3.75em;
+		font-weight: 100;
+		text-align: center;
+	}
+
+	.Modal--kabanas p {
+		font-size: 2.25em;
+		text-align: center;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	.Modal--kabanas h1 {
+		font-size: 4.5em;
+		font-weight: 100;
+		text-align: center;
+		margin-bottom: 1.5em;
+	}
+
+	.Modal--kabanas p {
+		font-size: 3em;
+		text-align: center;
+	}
+
 }

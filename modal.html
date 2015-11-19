@@ -9,21 +9,19 @@
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
 <link rel="stylesheet" href="css/modal.css"/>
 
-<button onclick="modal.triggerCtrl();">foo</button>
+<button onclick="modal.triggerCtrl();">open</button>
 
-<div id="modal" class="Modal">
+<div id="modal" class="Modal ModalBackDrop">
 
-	<div class="ModalBackDrop"></div>
-
-	<div class="ModalInner blue">
+	<div class="ModalInner red">
 
 		<div class="ModalHeader flex justify-end">
 
-			<button class="ModalClose">foo</button>
+			<button class="ModalClose"></button>
 
 		</div>
 
-		<div class="ModalBody">hhe</div>
+		<div class="ModalBody"></div>
 
 	</div>
 
@@ -36,6 +34,7 @@
 	var modal = new Modal(document.getElementById('modal'));
 
 	modal.init();
+//	modal.open();
 
 </script>
 

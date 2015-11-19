@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="css/info-box.css"/>
 	<link rel="stylesheet" href="css/contact.css"/>
 	<link rel="stylesheet" href="css/block.css"/>
+	<link rel="stylesheet" href="css/modal.css"/>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
 	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
@@ -29,6 +30,34 @@
 <main id="main" class="Main">
 
 	<header id="main-header" class="MainHeader bg-cover">
+
+		<div id="modal" class="Modal Modal--kabanas ModalBackDrop">
+
+			<div class="ModalInner">
+
+				<div class="ModalHeader flex justify-end">
+
+					<a class="ModalClose">
+
+						<span class="text">voltar</span>
+
+						<span class="icon fa fa-close"></span>
+
+					</a>
+
+				</div>
+
+				<div class="ModalBody flex flex-column justify-center align-center font-deep-orange-900">
+
+					<h1>Entre em contato</h1>
+
+					<p>(18) 3351-4181</p>
+
+				</div>
+
+			</div>
+
+		</div>
 
 		<div id="main-header-background" class="MainHeaderBackground"></div>
 
@@ -121,7 +150,7 @@
 
 				<!-- Contact -->
 
-				<article class="InfoBox InfoBox--contact orange-a700 align-center justify-center font-white border-orange-a700">
+				<article class="InfoBox InfoBox--contact orange-a700 align-center justify-center font-white border-orange-a700" onclick="modal.triggerCtrl();">
 
 					<header class="InfoBox-header">
 
@@ -131,7 +160,6 @@
 
 					<div class="InfoBox-body">
 						<h1>Contato</h1>
-						<p>(18) 3351-4181</p>
 					</div>
 
 
@@ -702,6 +730,7 @@
 <script src="js/header.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/roulette.js"></script>
+<script src="js/modal.js"></script>
 <script>
 
 	var header = new Header(document.getElementById('main-header'), document.getElementById('main-header-wrapper'));
@@ -753,13 +782,18 @@
 		]
 	});
 
+	var modal = new Modal(document.getElementById('modal'));
+
 </script>
 
 <script>
 
+	modal.init();
 	header.init();
 	nav.init();
 	roulette.init();
+
+	modal.open();
 
 	addListener(document.getElementById('main-logo'), 'click', 'onclick', roulette.loadBtnCtrl, false);
 

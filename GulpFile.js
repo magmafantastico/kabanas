@@ -36,9 +36,9 @@ imgfiles = 'img/*';
 
 gulp.task('css', function() {
 	gulp.src('css/*')
-		.pipe(concatCss("lalolla.css"))
+		.pipe(concatCss("kabanas.css"))
 		.pipe(gulp.dest('dist/css'));
-	gulp.src('dist/css/lalolla.css')
+	gulp.src('dist/css/kabanas.css')
 		.pipe(minifycss())
 		.pipe(rename({
 			extname: '.min.css'

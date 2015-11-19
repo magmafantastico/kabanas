@@ -366,10 +366,10 @@
   }
 
   /**
-   * Creates a printable wrapper for the given element.
+   * Creates a printable inner for the given element.
    * @private
    * @param {Element} element The element.
-   * @returns {Element} The wrapper.
+   * @returns {Element} The inner.
    */
   function createWrapper(element) {
     var node,
@@ -377,12 +377,12 @@
         index = nodes.length,
         wrapper = element.ownerDocument.createElement(shivNamespace + ':' + element.nodeName);
 
-    // copy element attributes to the wrapper
+    // copy element attributes to the inner
     while (index--) {
       node = nodes[index];
       node.specified && wrapper.setAttribute(node.nodeName, node.nodeValue);
     }
-    // copy element styles to the wrapper
+    // copy element styles to the inner
     wrapper.style.cssText = element.style.cssText;
     return wrapper;
   }

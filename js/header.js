@@ -8,8 +8,8 @@ var Header = (function() {
 
 		this.viewport = viewport;
 
-		this.wrapper = {};
-		this.wrapper.viewport = wrapper;
+		this.inner = {};
+		this.inner.viewport = wrapper;
 
 		this.resizeCtrl = function() {
 
@@ -21,7 +21,7 @@ var Header = (function() {
 
 	Header.prototype.resizeViewport = function() {
 
-		this.viewport.style.height = this.wrapper.viewport.offsetHeight + 'px';
+		this.viewport.style.height = this.inner.viewport.offsetHeight + 'px';
 
 	};
 
