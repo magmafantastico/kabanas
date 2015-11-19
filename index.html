@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/wwd.css"/>
 	<link rel="stylesheet" href="css/info-box.css"/>
 	<link rel="stylesheet" href="css/contact.css"/>
+	<link rel="stylesheet" href="css/block.css"/>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
 	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
@@ -25,19 +26,23 @@
 	<![endif]-->
 </head>
 
-<main class="Main">
+<main id="main" class="Main">
 
-	<header class="MainHeader bg-cover">
+	<header id="main-header" class="MainHeader bg-cover">
 
-		<section class="About">
+		<div id="main-header-background" class="MainHeaderBackground"></div>
 
-			<!-- Logo -->
+		<div id="main-header-wrapper" class="MainHeaderWrapper">
 
-			<div class="MainLogo flex justify-start">
+			<section class="About">
 
-				<a class="MainLogo-select-area flex align-center">
+				<!-- Logo -->
 
-					<svg version="1.1" id="KabanasLogo" class="MainLogo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<div class="MainLogo flex justify-start">
+
+					<a id="main-logo" class="MainLogo-select-area flex align-center">
+
+						<svg version="1.1" id="KabanasLogo" class="MainLogo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		 viewBox="0 0 1246.9 965.5" style="enable-background:new 0 0 1246.9 965.5;" xml:space="preserve">
 					<g id="logotype">
 						<g id="logo">
@@ -108,115 +113,117 @@
 					</g>
 				</svg>
 
-					<!--<img class="MainLogo-img" src="img/logo-white_Kabanas.png" alt="Logo"/>-->
+						<!--<img class="MainLogo-img" src="img/logo-white_Kabanas.png" alt="Logo"/>-->
 
-				</a>
+					</a>
 
-			</div>
-
-			<!-- Contact -->
-
-			<article class="InfoBox InfoBox--contact orange-a700 align-center justify-center font-white border-orange-a700">
-
-				<header class="InfoBox-header">
-
-					<span class="icon fa fa-phone"></span>
-				</header>
-
-
-				<div class="InfoBox-body">
-					<h1>Contato</h1>
-					<p>(18) 3351-4181</p>
 				</div>
 
+				<!-- Contact -->
 
-			</article>
+				<article class="InfoBox InfoBox--contact orange-a700 align-center justify-center font-white border-orange-a700">
 
-		</section>
+					<header class="InfoBox-header">
 
-		<!-- Nav -->
+						<span class="icon fa fa-phone"></span>
+					</header>
 
-		<nav class="MainNav">
 
-			<article class="InfoBox InfoBox--wwd blue font-white border-blue h-blue hfont-white">
+					<div class="InfoBox-body">
+						<h1>Contato</h1>
+						<p>(18) 3351-4181</p>
+					</div>
 
-				<header class="InfoBox-header" style="border-top-left-radius: 25%;">
-					<span class="icon fa fa-windows"></span>
-				</header>
 
-				<div class="InfoBox-body">
-					<h1>Software</h1>
-					<p>Reinstalação de aplicativos e sistemas operacionais (Windows, Mac e Linux).</p>
-				</div>
+				</article>
 
-			</article>
+			</section>
 
-			<article class="InfoBox InfoBox--wwd orange font-white border-orange h-orange hfont-white">
+			<!-- Nav -->
 
-				<header class="InfoBox-header">
-					<span class="icon fa fa-ambulance"></span>
-				</header>
+			<nav class="MainNav">
 
-				<div class="InfoBox-body">
-					<h1>Suporte</h1>
-					<p>Suporte técnico no local ou por telefone e manutentação de componentes de informática.</p>
-				</div>
+				<article id="nav-software" class="InfoBox InfoBox--wwd blue font-white border-blue h-blue hfont-white">
 
-			</article>
+					<header class="InfoBox-header" style="border-top-left-radius: 25%;">
+						<span class="icon fa fa-windows"></span>
+					</header>
 
-			<article class="InfoBox InfoBox--wwd green font-white border-green h-green hfont-white">
+					<div class="InfoBox-body">
+						<h1>Software</h1>
+						<p>Reinstalação de aplicativos e sistemas operacionais (Windows, Mac e Linux).</p>
+					</div>
 
-				<header class="InfoBox-header">
-					<span class="icon fa fa-laptop"></span>
-				</header>
+				</article>
 
-				<div class="InfoBox-body">
-					<h1>Hardware</h1>
-					<p>Venda e instalação de computadores, impressoras, monitores e nobreaks.</p>
-				</div>
+				<article id="nav-support" class="InfoBox InfoBox--wwd orange font-white border-orange h-orange hfont-white">
 
-			</article>
+					<header class="InfoBox-header">
+						<span class="icon fa fa-ambulance"></span>
+					</header>
 
-			<article class="InfoBox InfoBox--wwd red font-white border-red h-red hfont-white">
+					<div class="InfoBox-body">
+						<h1>Suporte</h1>
+						<p>Suporte técnico no local ou por telefone e manutentação de componentes de informática.</p>
+					</div>
 
-				<header class="InfoBox-header">
-					<span class="icon fa fa-connectdevelop"></span>
-				</header>
+				</article>
 
-				<div class="InfoBox-body">
-					<h1>Rede</h1>
-					<p>Instalação, configuração e manutentação de redes domésticas e corporativas.</p>
-				</div>
+				<article id="nav-hardware" class="InfoBox InfoBox--wwd green font-white border-green h-green hfont-white">
 
-			</article>
+					<header class="InfoBox-header">
+						<span class="icon fa fa-laptop"></span>
+					</header>
 
-			<article class="InfoBox InfoBox--wwd teal font-white border-teal h-teal hfont-white">
+					<div class="InfoBox-body">
+						<h1>Hardware</h1>
+						<p>Venda e instalação de computadores, impressoras, monitores e nobreaks.</p>
+					</div>
 
-				<header class="InfoBox-header">
-					<span class="icon fa fa-cloud"></span>
-				</header>
+				</article>
 
-				<div class="InfoBox-body">
-					<h1>Nuvem</h1>
-					<p>Consultoria de instalação de serviços de backup em nuvem.</p>
-				</div>
+				<article id="nav-network" class="InfoBox InfoBox--wwd red font-white border-red h-red hfont-white">
 
-			</article>
+					<header class="InfoBox-header">
+						<span class="icon fa fa-connectdevelop"></span>
+					</header>
 
-			<article class="InfoBox InfoBox--wwd indigo font-white border-indigo h-indigo hfont-white">
+					<div class="InfoBox-body">
+						<h1>Rede</h1>
+						<p>Instalação, configuração e manutentação de redes domésticas e corporativas.</p>
+					</div>
 
-				<header class="InfoBox-header">
-					<span class="icon fa fa-globe"></span>
-				</header>
+				</article>
 
-				<div class="InfoBox-body">
-					<h1>Web</h1>
-					<p>Desenvolvimento de websites, hospedagem para e-mails, serviços e sistemas Web.</p>
-				</div>
+				<article id="nav-cloud" class="InfoBox InfoBox--wwd teal font-white border-teal h-teal hfont-white">
 
-			</article>
+					<header class="InfoBox-header">
+						<span class="icon fa fa-cloud"></span>
+					</header>
 
-		</nav>
+					<div class="InfoBox-body">
+						<h1>Nuvem</h1>
+						<p>Consultoria de instalação de serviços de backup em nuvem.</p>
+					</div>
+
+				</article>
+
+				<article id="nav-web" class="InfoBox InfoBox--wwd indigo font-white border-indigo h-indigo hfont-white">
+
+					<header class="InfoBox-header">
+						<span class="icon fa fa-globe"></span>
+					</header>
+
+					<div class="InfoBox-body">
+						<h1>Web</h1>
+						<p>Desenvolvimento de websites, hospedagem para e-mails, serviços e sistemas Web.</p>
+					</div>
+
+				</article>
+
+			</nav>
+
+		</div>
 
 	</header>
 
@@ -301,7 +308,7 @@
 		</div>
 		<style scoped>
 			#support {
-				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("img/moto.jpg");
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("dist/img/moto.jpg");
 			}
 
 			.block {
@@ -512,25 +519,25 @@
 						</header>
 						<div class="pictures" id="pictures">
 							<div class="pic">
-								<img src="img/moto.jpg" alt="moto"/>
+								<!--<img src="img/moto.jpg" alt="moto"/>-->
 								<footer class="grey-800 font-grey-300">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nostrum quibusdam repellat.</p>
 								</footer>
 							</div>
 							<div class="pic">
-								<img src="img/tv.jpeg" alt="moto"/>
+								<!--<img src="img/tv.jpeg" alt="moto"/>-->
 								<footer class="grey-800 font-grey-300">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deleniti exercitationem facere, maxime natus temporibus unde veniam? Deserunt eius, fugiat id laboriosam libero minima quo ullam? Accusantium officiis quod veritatis!</p>
 								</footer>
 							</div>
 							<div class="pic">
-								<img src="img/mac.jpeg" alt="moto"/>
+								<!--<img src="img/mac.jpeg" alt="moto"/>-->
 								<footer class="grey-800 font-grey-300">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda earum inventore totam.</p>
 								</footer>
 							</div>
 							<div class="pic">
-								<img src="img/hardware.jpeg" alt="moto"/>
+								<!--<img src="img/hardware.jpeg" alt="moto"/>-->
 								<footer class="grey-800 font-grey-300">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus eligendi ipsam numquam optio repellendus suscipit tempore totam.</p>
 								</footer>
@@ -591,10 +598,10 @@
 		</div>
 	</div>
 
-	<div id="network" class="block font-white">
+	<div id="network" class="block red font-white">
 		<style scoped="scoped">
 			#network {
-				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("img/cub.jpeg");
+				/*background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("img/cub.jpeg");*/
 			}
 		</style>
 		<div class="container full">
@@ -654,7 +661,7 @@
 	<div id="web" class="block grey-900 font-white">
 		<style scoped="scoped">
 			#web {
-				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("img/sky.jpeg");
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("dist/img/7VRjBuoQRG6b0U7sIqjk_ConstructionNight_wide2.jpg");
 			}
 		</style>
 		<div class="container full">
@@ -691,14 +698,76 @@
 
 </main>
 
-<style scoped>
-	body > footer {
-	}
-</style>
+<script src="js/f.js"></script>
+<script src="js/header.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/roulette.js"></script>
+<script>
+
+	var header = new Header(document.getElementById('main-header'), document.getElementById('main-header-wrapper'));
+
+	var nav = new Nav([
+		{
+			target: document.getElementById('nav-software'),
+			scrollTo: document.getElementById('software')
+		},
+		{
+			target: document.getElementById('nav-support'),
+			scrollTo: document.getElementById('support')
+		},
+		{
+			target: document.getElementById('nav-hardware'),
+			scrollTo: document.getElementById('hardware')
+		},
+		{
+			target: document.getElementById('nav-network'),
+			scrollTo: document.getElementById('network')
+		},
+		{
+			target: document.getElementById('nav-cloud'),
+			scrollTo: document.getElementById('cloud')
+		},
+		{
+			target: document.getElementById('nav-web'),
+			scrollTo: document.getElementById('web')
+		}
+	]);
+
+	var roulette = new Roulette(document.getElementById('main-header-background'), {
+		target: document.getElementById('main'),
+		images: [
+			'dist/img/7VRjBuoQRG6b0U7sIqjk_ConstructionNight_wide2.jpg',
+			'dist/img/photo-1414342952040-4c09ded92ce9.jpeg',
+			'dist/img/photo-1415931633537-351070d20b81.jpeg',
+			'dist/img/photo-1417733403748-83bbc7c05140.jpeg',
+			'dist/img/photo-1428677361686-f9d23be145c9.jpeg',
+			'dist/img/photo-1429051883746-afd9d56fbdaf.jpeg',
+			'dist/img/photo-1429152937938-07b5f2828cdd.jpeg',
+			'dist/img/photo-1431932441182-250651654c23.jpeg',
+			'dist/img/photo-1441716844725-09cedc13a4e7.jpeg',
+			'dist/img/photo-1444090542259-0af8fa96557e.jpeg',
+			'dist/img/photo-1444703686981-a3abbc4d4fe3.jpeg',
+			'dist/img/photo-1445251836269-d158eaa028a6.jpeg',
+			'dist/img/photo-1445964047600-cdbdb873673d.jpeg',
+			'dist/img/photo-1446080501695-8e929f879f2b.jpeg'
+		]
+	});
+
+</script>
 
 <script>
 
-	var s = document.getElementsByClassName('switch');
+	header.init();
+	nav.init();
+	roulette.init();
+
+	addListener(document.getElementById('main-logo'), 'click', 'onclick', roulette.loadBtnCtrl, false);
+
+</script>
+
+<script>
+
+	/*var s = document.getElementsByClassName('switch');
 
 	var switcher;
 	switcher = function() {
@@ -799,7 +868,7 @@
 		var r = getHeightRatio();
 		if (r >= 0) e.style.backgroundColor = 'rgba(230,81,0,' + r + ')';
 		else e.style.backgroundColor = 'rgba(230,81,0,' + 0 + ')';
-	};
+	};*/
 
 //	window.addEventListener('scroll', handleBodyBackground);
 //	window.addEventListener('resize', handleBodyBackground);

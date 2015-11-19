@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Modal</title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<meta name="theme-color" content="#000000"/>
+<script src="dist/js/villa.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="css/modal.css"/>
+
+<button onclick="modal.triggerCtrl();">foo</button>
+
+<div id="modal" class="Modal">
+
+	<div class="ModalBackDrop"></div>
+
+	<div class="ModalWrapper">
+
+		<div class="ModalInner blue">
+
+			<div class="ModalHeader flex justify-end">
+
+				<button class="ModalClose">foo</button>
+
+			</div>
+
+			<div class="ModalBody">hhe</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script src="js/f.js"></script>
+<script src="js/modal.js"></script>
+<script>
+
+	var modal = new Modal(document.getElementById('modal'));
+
+	modal.init();
+
+</script>
+
+</html>

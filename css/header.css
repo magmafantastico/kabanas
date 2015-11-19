@@ -1,6 +1,28 @@
 /* Header */
 
 .MainHeader {
+	height: 100%;
+}
+
+.MainHeaderBackground {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-transition: opacity .6s ease;
+	-moz-transition: opacity .6s ease;
+	-ms-transition: opacity .6s ease;
+	-o-transition: opacity .6s ease;
+	transition: opacity .6s ease;
+}
+
+.MainHeaderBackground.is-active {
+	opacity: 1;
+}
+
+.MainHeaderWrapper {
 	border-left: solid 1em #ff5722;
 	display: -webkit-box;
 	display: -moz-box;
@@ -11,6 +33,15 @@
 	flex-direction: column;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.MainHeaderBackground {
+	z-index: 0;
 }
 
 .MainHeader h1 {
@@ -46,11 +77,14 @@
 }
 
 .MainLogo-select-area:hover {
-	background-color: rgba(255,255,255,1);
+	border-radius: 1px;
+	background-color: rgba(255,255,255,.9);
 }
 
 .MainLogo-svg {
 	height: 8em;
+	-webkit-filter: drop-shadow(-1px 1px 2px rgba(62, 39, 35, .5));
+	filter: drop-shadow(-1px 1px 2px rgba(62, 39, 35, .5));
 }
 
 .MainLogo-svg .logo,
@@ -81,7 +115,16 @@
 
 @media (min-width: 36em) {
 
-	.MainHeader {
+	.MainHeaderBackground {
+		left: 0;
+		height: 100%;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.MainHeaderWrapper {
 		padding: 1.125em;
 		height: 100vh;
 	}
@@ -91,7 +134,7 @@
 		fill: #ffffff;
 	}
 
-	.MainLogo-select-area:hover .MainLogo-svg .logo {
+	.MainLogo-select-area .MainLogo-svg .logo {
 		fill: #ff5722;
 	}
 
@@ -103,15 +146,21 @@
 
 @media (min-width: 48em) {
 
-	.MainHeader {
-		background-color: rgba(0,0,0,.18);
-		/*background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879f2b?ixlib=rb-0.3.5&q=80&fm=jpg&s=9486c9d5373bd6a37a9d03ea3b63c565');*/
-		background-image: url('https://images.unsplash.com/photo-1445964047600-cdbdb873673d?ixlib=rb-0.3.5&q=80&fm=jpg&s=152d73d177d81f21f04f7ea9f65754e0');
+	.MainHeaderWrapper {
+		height: 100vh;
 		padding: 2.25em;
 	}
 
 	.MainLogo-svg {
 		height: 10em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.MainHeaderWrapper {
+		border: none;
 	}
 
 }
@@ -126,8 +175,7 @@
 
 @media (min-width: 96em) {
 
-	.MainHeader {
-		border: none;
+	.MainHeaderWrapper {
 		padding: 3em;
 	}
 
