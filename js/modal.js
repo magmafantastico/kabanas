@@ -41,6 +41,14 @@ var Modal = (function() {
 
 		};
 
+		this.escapeCtrl = function(event) {
+
+			if (self.active)
+				if (event.keyCode == 27)
+					self.close();
+
+		};
+
 	}
 
 	Modal.prototype.open = function() {
@@ -101,8 +109,12 @@ var Modal = (function() {
 
 	Modal.prototype.addListeners = function() {
 
+		var self = this;
+
 		this.getCloseButton();
 		this.getBackDrop();
+
+		window.addEventListener('keypress', this.escapeCtrl, false);
 
 	};
 
