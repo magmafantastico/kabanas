@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="fira-sans">
+<html lang="pt-br" class="open-sans">
 <head>
 	<meta charset="utf-8"/>
 	<title>Kabanas</title>
@@ -10,15 +10,16 @@
 	<link rel="stylesheet" href="dist/css/villa.min.css"/>
 	<link rel="stylesheet" href="dist/css/mowe.css"/>
 	<link rel="stylesheet" href="dist/css/font-awesome.css"/>
-	<link rel="stylesheet" href="css/_.css"/>
-	<link rel="stylesheet" href="css/header.css"/>
-	<link rel="stylesheet" href="css/about.css"/>
-	<link rel="stylesheet" href="css/nav.css"/>
-	<link rel="stylesheet" href="css/wwd.css"/>
-	<link rel="stylesheet" href="css/info-box.css"/>
-	<link rel="stylesheet" href="css/contact.css"/>
-	<link rel="stylesheet" href="css/block.css"/>
-	<link rel="stylesheet" href="css/modal.css"/>
+	<link rel="stylesheet" href="dist/css/kabanas.css"/>
+	<!--<link rel="stylesheet" href="css/_.css"/>-->
+	<!--<link rel="stylesheet" href="css/header.css"/>-->
+	<!--<link rel="stylesheet" href="css/about.css"/>-->
+	<!--<link rel="stylesheet" href="css/nav.css"/>-->
+	<!--<link rel="stylesheet" href="css/wwd.css"/>-->
+	<!--<link rel="stylesheet" href="css/info-box.css"/>-->
+	<!--<link rel="stylesheet" href="css/contact.css"/>-->
+	<!--<link rel="stylesheet" href="css/block.css"/>-->
+	<!--<link rel="stylesheet" href="css/modal.css"/>-->
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
 	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
@@ -255,7 +256,7 @@
 
 	</header>
 
-	<style scoped>
+	<style>
 
 		.block {
 			background-repeat: no-repeat;
@@ -331,10 +332,26 @@
 	</div>
 
 	<div id="support" class="block font-white">
-		<div class="container full">
-			<h1>Suporte</h1>
+		<div class="container full flex justify-between">
+
+			<header>
+
+				<h1>Suporte</h1>
+
+			</header>
+
+			<footer>
+				
+				<ul>
+					
+					<li><a href="d/">Downloads</a></li>
+					
+				</ul>
+				
+			</footer>
+
 		</div>
-		<style scoped>
+		<style>
 			#support {
 				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("dist/img/moto.jpg");
 			}
@@ -428,6 +445,7 @@
 		</style>
 		<div class="swip">
 			<div class="slide">
+
 				<div class="container full">
 					<div class="about">
 						<p>Prestação de suporte na loja e também a domicilio para computadores, redes, equipamentos, celulares e tablets.</p>
@@ -442,10 +460,12 @@
 					</div>
 					<div></div>
 				</div>
+
 				<a class="switch flat large grey">Ver galeria</a>
+
 			</div>
 			<div class="slide">
-				<style scoped>
+				<style>
 					.album {
 						display: -webkit-box;
 						display: -moz-box;
@@ -575,6 +595,7 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 
 	<style>
@@ -627,7 +648,7 @@
 	</div>
 
 	<div id="network" class="block red font-white">
-		<style scoped="scoped">
+		<style>
 			#network {
 				/*background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("img/cub.jpeg");*/
 			}
@@ -677,7 +698,7 @@
 		</div>
 	</div>
 
-	<style scoped="scoped">
+	<style>
 		.center {
 			display: flex;
 			flex-direction: column;
@@ -686,8 +707,24 @@
 		}
 	</style>
 
-	<div id="web" class="block grey-900 font-white">
-		<style scoped="scoped">
+	<style>
+
+		.block--web {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-flow: column;
+			flex-flow: column;
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+		}
+
+	</style>
+
+	<div id="web" class="block block--web grey-900 font-white">
+		<style>
 			#web {
 				background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%), url("dist/img/7VRjBuoQRG6b0U7sIqjk_ConstructionNight_wide2.jpg");
 			}
@@ -720,7 +757,73 @@
 					</div>
 				</div>
 			</div>
-			<div class="content"></div>
+		</div>
+		<div class="container full">
+
+			<style>
+
+				.Partiners {
+					display: -webkit-box;
+					display: -moz-box;
+					display: -ms-flexbox;
+					display: -webkit-flex;
+					display: flex;
+					-webkit-justify-content: space-around;
+					justify-content: space-around;
+					-webkit-flex-flow: row wrap;
+					flex-flow: row wrap;
+					margin: 1em auto;
+					max-width: 60em;
+					padding: 0 1em;
+				}
+
+				.Partiners a {
+					margin: 0 0 1em;
+				}
+
+				.Partiners img {
+					max-height: 3em;
+					-webkit-transition: filter .4s;
+					-moz-transition: filter .4s;
+					-ms-transition: filter .4s;
+					-o-transition: filter .4s;
+					transition: filter .4s;
+				}
+
+				.Partiners a:hover img {
+					filter: drop-shadow(1px 1px 12px rgba(255,255,255,.36));
+				}
+
+			</style>
+
+			<div class="Partiners">
+
+				<a href="http://">
+
+					<img src="img/web-partiner_Partiner--lalolla.png" alt="Logo de parceiro - La Lolla"/>
+
+				</a>
+
+				<a href="http://">
+
+					<img src="img/web-partiner_Partiner--wtal.png" alt="Logo de parceiro - Webtal"/>
+
+				</a>
+
+				<a href="http://">
+
+					<img src="img/web-partiner_Partiner--promafa.png" alt="Logo de parceiro - Promafa"/>
+
+				</a>
+
+				<a href="http://">
+
+					<img src="img/web-partiner_Partiner--raizdobrasil.png" alt="Logo de parceiro - Raiz do Brasil"/>
+
+				</a>
+
+			</div>
+
 		</div>
 	</div>
 
@@ -793,7 +896,7 @@
 	nav.init();
 	roulette.init();
 
-	modal.open();
+//	modal.open();
 
 	addListener(document.getElementById('main-logo'), 'click', 'onclick', roulette.loadBtnCtrl, false);
 
