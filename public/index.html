@@ -770,11 +770,26 @@
 					display: flex;
 					-webkit-justify-content: space-around;
 					justify-content: space-around;
-					-webkit-flex-flow: row wrap;
-					flex-flow: row wrap;
+					-webkit-align-items: center;
+					align-items: center;
+					-webkit-flex-flow: column;
+					flex-flow: column;
 					margin: 1em auto;
 					max-width: 60em;
 					padding: 0 1em;
+				}
+
+				.PartinersList {
+					display: -webkit-box;
+					display: -moz-box;
+					display: -ms-flexbox;
+					display: -webkit-flex;
+					display: flex;
+					-webkit-justify-content: space-around;
+					justify-content: space-around;
+					-webkit-flex-flow: row wrap;
+					flex-flow: row wrap;
+					width: 100%;
 				}
 
 				.Partiners a {
@@ -794,33 +809,45 @@
 					filter: drop-shadow(1px 1px 12px rgba(255,255,255,.36));
 				}
 
+				.Partiners h4 {
+					font-weight: 100;
+					font-size: 2.25em;
+					margin: 0 0 .75em;
+				}
+
 			</style>
 
 			<div class="Partiners">
 
-				<a href="http://">
+				<h4>Nossos parceiros</h4>
 
-					<img src="img/web-partiner_Partiner--lalolla.png" alt="Logo de parceiro - La Lolla"/>
+				<div class="PartinersList">
 
-				</a>
+					<a href="http://www.lalolla.com.br">
 
-				<a href="http://">
+						<img src="../img/web-partiner_Partiner--lalolla.png" alt="Logo de parceiro - La Lolla"/>
 
-					<img src="img/web-partiner_Partiner--wtal.png" alt="Logo de parceiro - Webtal"/>
+					</a>
 
-				</a>
+					<a href="http://www.webtal.com.br">
 
-				<a href="http://">
+						<img src="../img/web-partiner_Partiner--wtal.png" alt="Logo de parceiro - Webtal"/>
 
-					<img src="img/web-partiner_Partiner--promafa.png" alt="Logo de parceiro - Promafa"/>
+					</a>
 
-				</a>
+					<a href="http://www.promafa.com.br">
 
-				<a href="http://">
+						<img src="../img/web-partiner_Partiner--promafa.png" alt="Logo de parceiro - Promafa"/>
 
-					<img src="img/web-partiner_Partiner--raizdobrasil.png" alt="Logo de parceiro - Raiz do Brasil"/>
+					</a>
 
-				</a>
+					<a href="http://www.raizdobrasil.com.br">
+
+						<img src="../img/web-partiner_Partiner--raizdobrasil.png" alt="Logo de parceiro - Raiz do Brasil"/>
+
+					</a>
+
+				</div>
 
 			</div>
 

@@ -1,0 +1,1 @@
+<?php header('Location: http://doctus.dyndns.info:8080/MagmaScientific-1.0/');

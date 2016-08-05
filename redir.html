@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Redirecionamento...</title>
+</head>
+<body>
+
+<h1>Redirecionamento</h1>
+<p>
+	Se esta página não for automaticamente redirecionada em 9 segundos, clique
+	<a id="link" href="http://stackoverflow.com">aqui</a>. <!-- << EDITE O LINK AQUI << -->
+</p>
+
+<script type="text/javascript">
+
+	var link = document.getElementById('link');
+
+	// similar behavior as an HTTP redirect
+	window.location.replace(link.href);
+
+</script>
+
+</body>
+</html>

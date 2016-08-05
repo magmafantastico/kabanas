@@ -1,0 +1,1 @@
+<?php header('Location: http://kabanas.dyndns.info:9090/owncloud');
